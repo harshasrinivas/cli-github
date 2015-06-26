@@ -12,6 +12,12 @@ setup(name = 'clipy-github',
       },
       url = 'https://github.com/harshasrinivas/clipy-github/',
       keywords = ['github', 'CLI', 'github-within-CLI', 'python'],
+      install_requires = [
+                  'argparse',
+                  'urllib.request',
+                  'base64',
+                  'json',
+      ],
       classifiers = [
           'Operating System :: POSIX',
           'Programming Language :: Python :: 3',
