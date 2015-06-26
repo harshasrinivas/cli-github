@@ -11,7 +11,7 @@ GITHUB_API = 'https://api.github.com/'
 API_TOKEN = os.environ.get('GITHUB_TOKEN')
 
 def main():
-    parser = argparse.ArgumentParser(description='Display repos of the given user')
+    parser = argparse.ArgumentParser(description='Github within the Command Line')
     g=parser.add_mutually_exclusive_group()
     g.add_argument('-n','--username', type=str, 
             help = "Get repos of the given username")
