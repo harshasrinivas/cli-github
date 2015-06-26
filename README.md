@@ -21,13 +21,13 @@ A Python App to display **Github from the command-line**
 
 **Github Token as Permanent Environment Variable**
 
-Set your Github Personal Access Token as the environment variable GITHUB_TOKEN
-
-`echo "export GITHUB_TOKEN = <your-token-within-quotes>" | sudo tee -a /etc/environment`
-
 **Github Token as Temporary Environment Variable**
 
-`GITHUB_TOKEN = <your-token-within-quotes>`
+`$ GITHUB_TOKEN = <your-token-within-quotes>`
+
+Set your Github Personal Access Token as the environment variable GITHUB_TOKEN
+
+`$ echo "export GITHUB_TOKEN = <your-token-within-quotes>" | sudo tee -a /etc/environment`
 
 **Without saving your Environment Variable**
 
@@ -57,19 +57,19 @@ Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <y
 
 Display the list of a user's repositories from the username
 
-`clipy-github -n harshasrinivas`
+`$ clipy-github -n harshasrinivas`
 
 Display the list of a user's repositories from the profile URL
 
-`clipy-github -u https://github.com/harshasrinivas`
+`$ clipy-github -u https://github.com/harshasrinivas`
 
 Display all the files and folders within a repository recursively from the repository URL
 
-`clipy-github -r https://github.com/harshasrinivas/clipy-github`
+`$ clipy-github -r https://github.com/harshasrinivas/clipy-github`
 
 Get the RAW version of the readme file of a repository from the repository URL
 
-`clipy-github -R https://github.com/harshasrinivas/clipy-github`
+`$ clipy-github -R https://github.com/harshasrinivas/clipy-github`
 
 
 
