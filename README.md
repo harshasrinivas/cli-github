@@ -4,7 +4,7 @@ clipy-github
 A Python App to display **Github from the command-line**
 
 
-#INSTALLATION
+#Installation
 
 ##Using `PIP`
 
@@ -17,19 +17,19 @@ A Python App to display **Github from the command-line**
 
 
 
-#SETTING UP
+#Setting Up
 
-##Github Token as Permanent Environment Variable
+**Github Token as Permanent Environment Variable**
 
 Set your Github Personal Access Token as the environment variable GITHUB_TOKEN
 
 `echo "export GITHUB_TOKEN = <your-token-within-quotes>" >> /etc/environment`
 
-##Github Token as Temporary Environment Variable
+**Github Token as Temporary Environment Variable**
 
 `GITHUB_TOKEN = <your-token-within-quotes>`
 
-##Without saving your Environment Variable
+**Without saving your Environment Variable**
 
 Open the `clipy_github/mains.py` file
 
@@ -37,7 +37,7 @@ Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <y
 
 
 
-#OPTIONS
+#Options
 
 ```sh
 -h, --help            show this help message and exit
@@ -53,7 +53,7 @@ Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <y
 
 
 
-#USAGE
+#Usage
 
 Display the list of a user's repositories from the username
 
@@ -73,6 +73,6 @@ Get the RAW version of the readme file of a repository from the repository URL
 
 
 
-#CONTRIBUTE
+#Contribute
 
 If you want to add features, improve them, or report issues, feel free to send a pull request.
