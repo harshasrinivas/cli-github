@@ -1,12 +1,13 @@
 #! /usr/bin/env python3
 
-API_TOKEN = ''
-GITHUB_API = 'https://api.github.com/'
-
 import argparse
 import json
 import urllib.request
 import base64
+
+GITHUB_API = 'https://api.github.com/'
+
+API_TOKEN = os.environ.get('GITHUB_TOKEN')
 
 def main():
     parser = argparse.ArgumentParser(description='Display repos of the given user')
