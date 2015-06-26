@@ -25,6 +25,8 @@ def main():
     
     if(args.url):
         name=args.url[19:]
+        if name.endswith('/'):
+                name = name[:-1]
         url = GITHUB_API + 'users/' +name + '/repos'
         
 
