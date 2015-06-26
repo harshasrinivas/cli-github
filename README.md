@@ -6,7 +6,7 @@ A Python App to display **Github from the command-line**
 
 #Installation
 
-##Using `PIP`
+##Using `pip`
 
 `pip3 install clipy_github`
 
