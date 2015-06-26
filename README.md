@@ -15,7 +15,7 @@ A Python App to display **Github from the command-line**
 * Clone the repo `git clone https://github.com/harshasrinivas/clipy-github.git`
 * Run `python3 setup.py install`
 
-
+<br>
 
 #Setting Up
 
@@ -35,7 +35,7 @@ Open the `clipy_github/mains.py` file
 
 Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <your-token-within-quotes> `
 
-
+<br>
 
 #Options
 
@@ -46,9 +46,9 @@ Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <y
 -u URL, --url URL 
                     Get repos from the user profile URL
 -r RECURSIVE, --recursive RECURSIVE
-                        Get the file structure from the repo link URL
-  -R README, --readme README
-                        Get the raw version of the repository readme file from repo link URL
+                    Get the file structure from the repo link URL
+-R README, --readme README
+                    Get the raw version of the repository readme file from repo link URL
 ```
 
 
