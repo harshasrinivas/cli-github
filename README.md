@@ -19,13 +19,11 @@ A Python App to display **Github from the command-line**
 
 #Setting Up
 
-**Github Token as Permanent Environment Variable**
-
 **Github Token as Temporary Environment Variable**
 
 `$ GITHUB_TOKEN = <your-token-within-quotes>`
 
-Set your Github Personal Access Token as the environment variable GITHUB_TOKEN
+**Github Token as Permanent Environment Variable**
 
 `$ echo "export GITHUB_TOKEN = <your-token-within-quotes>" | sudo tee -a /etc/environment`
 
