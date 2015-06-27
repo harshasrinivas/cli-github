@@ -45,6 +45,7 @@ def main():
             print("Invalid Credentials. For help, type 'clipy-github -h'")
             print('-'*150)
             return
+ 
         jsondata = json.loads(response)
         sha = jsondata['commit']['commit']['tree']['sha']
         url=GITHUB_API+'repos/'+name+'/git/trees/'+sha+'?recursive=1'
