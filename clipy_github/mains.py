@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import os, argparse, json, urllib.request, base64
+from prettytable import PrettyTable
 
 GITHUB_API = 'https://api.github.com/'
 
@@ -66,17 +67,22 @@ def main():
         return
         
     jsondata = json.loads(response)
-    print('-'*150,'-'*150)
     if(args.url or args.username):
+        x = PrettyTable([" Repository ", "★ Star"])
         for i in jsondata:
-            print('\t* '+i['name'])
+            x.add_row([i['name'],i['stargazers_count']])
+        print(x)
 
     if(args.recursive):
+        x = PrettyTable([" File/Folder ", " Size (Bytes) "])
         for i in jsondata['tree']:
-            print(i['path'])
-    
+            size='-'
+            path=i['path']+'/'
+            if(i['type']=='blob'):
+                size=i['size']
+                path=path[:-1]
+            x.add_row([path,size])
+        print(x)
+            
     if(args.readme):
         print(base64.b64decode(jsondata['content']).decode('utf-8'));
-    
-    print('-'*150,'-'*150)
-
