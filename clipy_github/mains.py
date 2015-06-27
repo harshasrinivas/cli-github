@@ -37,7 +37,13 @@ def main():
         url = GITHUB_API + 'repos/' +name + '/branches/master'
         request = urllib.request.Request(url)
         request.add_header('Authorization', 'token %s' % API_TOKEN)
-        response = urllib.request.urlopen(request).read().decode('utf-8')
+        try:
+            response = urllib.request.urlopen(request).read().decode('utf-8')
+        except urllib.error.HTTPError as err:
+            print('-'*150)
+            print("Invalid Credentials. For help, type 'clipy-github -h'")
+            print('-'*150)
+            return
         jsondata = json.loads(response)
         sha = jsondata['commit']['commit']['tree']['sha']
         url=GITHUB_API+'repos/'+name+'/git/trees/'+sha+'?recursive=1'
@@ -51,10 +57,16 @@ def main():
 
     request = urllib.request.Request(url)
     request.add_header('Authorization', 'token %s' % API_TOKEN)
-    response = urllib.request.urlopen(request).read().decode('utf-8')
+    try:
+        response = urllib.request.urlopen(request).read().decode('utf-8')
+    except urllib.error.HTTPError as err:
+        print('-'*150)
+        print("Invalid Credentials. For help, type 'clipy-github -h'")
+        print('-'*150)
+        return
+        
     jsondata = json.loads(response)
-    print('-'*150)
-    print('-'*150)
+    print('-'*150,'-'*150)
     if(args.url or args.username):
         for i in jsondata:
             print('\t* '+i['name'])
@@ -66,5 +78,5 @@ def main():
     if(args.readme):
         print(base64.b64decode(jsondata['content']).decode('utf-8'));
     
-    print('-'*150)
-    print('-'*150)
+    print('-'*150,'-'*150)
+
