@@ -74,3 +74,8 @@ Get the RAW version of the readme file of a repository from the repository URL
 #Contribute
 
 If you want to add features, improve them, or report issues, feel free to send a pull request.
+
+
+#License
+
+![GPL V3](https://raw.githubusercontent.com/harshasrinivas/clipy-github/master/images/gpl.png)
