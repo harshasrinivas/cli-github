@@ -70,6 +70,16 @@ Get the RAW version of the readme file of a repository from the repository URL
 `$ clipy-github -R https://github.com/harshasrinivas/clipy-github`
 
 
+#Live Demo
+
+[**DEMO**](http://showterm.io/b44508af0572c8cce18dc#fast) : Display the list of a user's repositories from the username
+
+[**DEMO**](http://showterm.io/39c400c208730baa33391#fast) : Display the list of a user's repositories from the profile URL
+
+[**DEMO**](http://showterm.io/a873e7aaa4edb6c62299a#fast) : Display all the files and folders within a repository recursively from the repository URL
+
+[**DEMO**](http://showterm.io/aac652b7ad65d87a0b621#fast) : To get the RAW version of the readme file of a repository from the repository URL
+
 
 #Contribute
 
