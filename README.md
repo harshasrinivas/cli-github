@@ -15,7 +15,13 @@ A Python App to display **Github from the command-line**
 * Clone the repo `git clone https://github.com/harshasrinivas/clipy-github.git`
 * Run `python3 setup.py install`
 
+##Dependencies
+
+* prettytable `pip3 install prettytable`
+
+
 <br>
+
 
 #Setting Up
 
