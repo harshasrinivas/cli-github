@@ -20,9 +20,6 @@ A Python App to display **Github from the command-line**
 * prettytable `pip3 install prettytable`
 
 
-<br>
-
-
 #Setting Up
 
 **Github Token as Temporary Environment Variable**
