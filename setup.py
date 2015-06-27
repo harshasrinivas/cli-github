@@ -10,6 +10,9 @@ setup(name = 'clipy-github',
       entry_points = {
           'console_scripts': ['clipy-github=clipy_github:main'],
       },
+      install_requires = [      
+               'prettytable',        
+      ],
       url = 'https://github.com/harshasrinivas/clipy-github/',
       keywords = ['github', 'CLI', 'github-within-CLI', 'python'],
       classifiers = [
