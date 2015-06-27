@@ -21,16 +21,13 @@ From the Source
 Setting Up
 ==========
 
-**Github Token as Permanent Environment Variable**
-
-Set your Github Personal Access Token as the environment variable
-GITHUB\_TOKEN
-
-``echo "export GITHUB_TOKEN = <your-token-within-quotes>" >> /etc/environment``
-
 **Github Token as Temporary Environment Variable**
 
-``GITHUB_TOKEN = <your-token-within-quotes>``
+``$ GITHUB_TOKEN = <your-token-within-quotes>``
+
+**Github Token as Permanent Environment Variable**
+
+``$ echo "export GITHUB_TOKEN = <your-token-within-quotes>" | sudo tee -a /etc/environment``
 
 **Without saving your Environment Variable**
 
@@ -59,24 +56,33 @@ Usage
 
 Display the list of a user's repositories from the username
 
-``clipy-github -n harshasrinivas``
+``$ clipy-github -n harshasrinivas``
 
 Display the list of a user's repositories from the profile URL
 
-``clipy-github -u https://github.com/harshasrinivas``
+``$ clipy-github -u https://github.com/harshasrinivas``
 
 Display all the files and folders within a repository recursively from
 the repository URL
 
-``clipy-github -r https://github.com/harshasrinivas/clipy-github``
+``$ clipy-github -r https://github.com/harshasrinivas/clipy-github``
 
 Get the RAW version of the readme file of a repository from the
 repository URL
 
-``clipy-github -R https://github.com/harshasrinivas/clipy-github``
+``$ clipy-github -R https://github.com/harshasrinivas/clipy-github``
 
 Contribute
 ==========
 
 If you want to add features, improve them, or report issues, feel free
 to send a pull request.
+
+License
+=======
+
+.. figure:: https://raw.githubusercontent.com/harshasrinivas/clipy-github/master/images/gpl.png
+   :alt: GPL V3
+
+   GPL V3
+
