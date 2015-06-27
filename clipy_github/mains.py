@@ -4,7 +4,8 @@ import os, argparse, json, urllib.request, base64
 
 GITHUB_API = 'https://api.github.com/'
 
-API_TOKEN = os.environ.get('GITHUB_TOKEN')
+#API_TOKEN = os.environ.get('GITHUB_TOKEN')
+API_TOKEN='5b1a8301db97a63c37101b0e001eca83cc96fb4a'
 
 def main():
     parser = argparse.ArgumentParser(description='Github within the Command Line')
