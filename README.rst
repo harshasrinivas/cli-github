@@ -22,7 +22,7 @@ Using ``pip``
 
 .. code:: sh
 
-   $ pip3 install clipy_github
+   $ pip install clipy_github
 
 From the Source
 ---------------
@@ -37,7 +37,7 @@ From the Source
    
    .. code:: sh
    
-      $ python3 setup.py install
+      $ python setup.py install
 
 Dependencies
 ============
@@ -46,7 +46,7 @@ Dependencies
    
    .. code:: sh
    
-      $ pip3 install prettytable
+      $ pip install prettytable
 
 Setting Up
 ==========
