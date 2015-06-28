@@ -2,7 +2,7 @@
 # encoding=utf8
 
 from __future__ import absolute_import
-import os, argparse, json, base64
+import os, sys, argparse, json, base64
 import urllib2, urllib
 from prettytable import PrettyTable
 
@@ -21,6 +21,11 @@ def main():
             help = u"Get the file structure from the repo link")
     g.add_argument(u'-R',u'--readme',type=unicode,
             help = u"Get the raw version of the repo readme from repo link")
+    
+    if len(sys.argv)==1:
+        parser.print_help()
+        return
+    
     args = parser.parse_args()
     
     if(args.url):

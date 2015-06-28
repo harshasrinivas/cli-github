@@ -1,5 +1,5 @@
 
 build/
-clipy_github.egg-info/
+cli_github.egg-info/
 dist/
 backup/
