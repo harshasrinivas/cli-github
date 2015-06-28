@@ -38,7 +38,7 @@ GITHUB\_TOKEN
 
 .. code:: sh
 
-   $ echo "export GITHUB_TOKEN = <your-token-within-quotes>" >> /etc/environment
+   $ echo "export GITHUB_TOKEN = <your-token-within-quotes>" | sudo tee -a /etc/environment
 
 **Github Token as Temporary Environment Variable**
 
