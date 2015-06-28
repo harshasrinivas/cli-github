@@ -1,7 +1,24 @@
-clipy-github
-============
+#`clipy-github`
 
 A Python App to display **Github from the command-line**
+
+#Screenshots
+
+`To fetch repos and stars using the username`
+
+![Username](images/name.png)
+
+`To fetch repos and stars using the profile URL`
+
+![URL](images/url.png)
+
+`To get all the files and folders within a repo from its link`
+
+![Tree](images/tree.png)
+
+`To get the RAW version of readme file from the repo link`
+
+![Readme](images/readme.png)
 
 
 #Installation
