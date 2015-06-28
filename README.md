@@ -56,15 +56,15 @@ Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <y
 
 #Usage
 
-Display the list of a user's repositories from the username
+Display the list of a user's repositories from the username, along with the number of stargazers
 
 `$ clipy-github -n harshasrinivas`
 
-Display the list of a user's repositories from the profile URL
+Display the list of a user's repositories from the profile URL, along with the number of stargazers
 
 `$ clipy-github -u https://github.com/harshasrinivas`
 
-Display all the files and folders within a repository recursively from the repository URL
+Display all the files and folders within a repository recursively from the repository URL, along with their sizes
 
 `$ clipy-github -r https://github.com/harshasrinivas/clipy-github`
 
@@ -75,13 +75,13 @@ Get the RAW version of the readme file of a repository from the repository URL
 
 #Live Demo
 
-[**DEMO**](http://showterm.io/b44508af0572c8cce18dc#fast) : Display the list of a user's repositories from the username
+[**DEMO**](http://showterm.io/72aa0ffb05765f7ec92c0#fast) : Display the list of a user's repositories from the username, along with the number of stargazers
 
-[**DEMO**](http://showterm.io/39c400c208730baa33391#fast) : Display the list of a user's repositories from the profile URL
+[**DEMO**](http://showterm.io/813bc4e61fc9d752d2cb6#fast) : Display the list of a user's repositories from the profile URL, along with the number of stargazers
 
-[**DEMO**](http://showterm.io/a873e7aaa4edb6c62299a#fast) : Display all the files and folders within a repository recursively from the repository URL
+[**DEMO**](http://showterm.io/459287d10701d531f3506#fast) : Display all the folders and files within a repository recursively from the repository URL, along with their sizes
 
-[**DEMO**](http://showterm.io/aac652b7ad65d87a0b621#fast) : To get the RAW version of the readme file of a repository from the repository URL
+[**DEMO**](http://showterm.io/09286d1d9b333be0cc9cd#fast) : To get the RAW version of the readme file of a repository from the repository URL
 
 
 #Contribute
