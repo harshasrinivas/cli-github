@@ -3,7 +3,7 @@ import sys
 
 setup(name = 'cli-github',
       description = 'Github inside the Command Line',
-      version = '1.0.1',
+      version = '1.0.2',
       license = 'GPL v3.0',
       author = 'Harsha Srinivas',
       author_email = '95harsha95@gmail.com',
