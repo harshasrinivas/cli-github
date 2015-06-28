@@ -1,35 +1,8 @@
-``clipy-github``
-================
+clipy-github
+============
 
 A Python App to display **Github from the command-line**
 
-Screenshots
-===========
-
-``To fetch repos and stars using the username``
-
-.. figure:: images/name.png
-   :alt: Username
-
-   Username
-``To fetch repos and stars using the profile URL``
-
-.. figure:: images/url.png
-   :alt: URL
-
-   URL
-``To get all the files and folders within a repo from its link``
-
-.. figure:: images/tree.png
-   :alt: Tree
-
-   Tree
-``To get the RAW version of readme file from the repo link``
-
-.. figure:: images/readme.png
-   :alt: Readme
-
-   Readme
 Installation
 ============
 
@@ -45,21 +18,19 @@ From the Source
    ``git clone https://github.com/harshasrinivas/clipy-github.git``
 -  Run ``python3 setup.py install``
 
-Dependencies
-------------
-
--  prettytable ``pip3 install prettytable``
-
 Setting Up
 ==========
 
-**Github Token as Temporary Environment Variable**
-
-``$ GITHUB_TOKEN = <your-token-within-quotes>``
-
 **Github Token as Permanent Environment Variable**
 
-``$ echo "export GITHUB_TOKEN = <your-token-within-quotes>" | sudo tee -a /etc/environment``
+Set your Github Personal Access Token as the environment variable
+GITHUB\_TOKEN
+
+``echo "export GITHUB_TOKEN = <your-token-within-quotes>" >> /etc/environment``
+
+**Github Token as Temporary Environment Variable**
+
+``GITHUB_TOKEN = <your-token-within-quotes>``
 
 **Without saving your Environment Variable**
 
@@ -86,56 +57,26 @@ Options
 Usage
 =====
 
-Display the list of a user's repositories from the username, along with
-the number of stargazers
+Display the list of a user's repositories from the username
 
-``$ clipy-github -n harshasrinivas``
+``clipy-github -n harshasrinivas``
 
-Display the list of a user's repositories from the profile URL, along
-with the number of stargazers
+Display the list of a user's repositories from the profile URL
 
-``$ clipy-github -u https://github.com/harshasrinivas``
+``clipy-github -u https://github.com/harshasrinivas``
 
 Display all the files and folders within a repository recursively from
-the repository URL, along with their sizes
+the repository URL
 
-``$ clipy-github -r https://github.com/harshasrinivas/clipy-github``
+``clipy-github -r https://github.com/harshasrinivas/clipy-github``
 
 Get the RAW version of the readme file of a repository from the
 repository URL
 
-``$ clipy-github -R https://github.com/harshasrinivas/clipy-github``
-
-Live Demo
-=========
-
-`**DEMO** <http://showterm.io/72aa0ffb05765f7ec92c0#fast>`__ : Display
-the list of a user's repositories from the username, along with the
-number of stargazers
-
-`**DEMO** <http://showterm.io/813bc4e61fc9d752d2cb6#fast>`__ : Display
-the list of a user's repositories from the profile URL, along with the
-number of stargazers
-
-`**DEMO** <http://showterm.io/459287d10701d531f3506#fast>`__ : Display
-all the folders and files within a repository recursively from the
-repository URL, along with their sizes
-
-`**DEMO** <http://showterm.io/09286d1d9b333be0cc9cd#fast>`__ : To get
-the RAW version of the readme file of a repository from the repository
-URL
+``clipy-github -R https://github.com/harshasrinivas/clipy-github``
 
 Contribute
 ==========
 
 If you want to add features, improve them, or report issues, feel free
 to send a pull request.
-
-License
-=======
-
-.. figure:: https://raw.githubusercontent.com/harshasrinivas/clipy-github/master/images/gpl.png
-   :alt: GPL V3
-
-   GPL V3
-
