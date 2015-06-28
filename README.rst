@@ -6,13 +6,13 @@ A Python App to display **Github from the command-line**
 Live Demo
 =========
 
-`DEMO <http://showterm.io/72aa0ffb05765f7ec92c0#fast>`__ : Display the list of a user's repositories from the username, along with the number of stargazers
+`DEMO <http://showterm.io/aaa79dee63aad0695e304#fast>`__ : Display the list of a user's repositories from the username, along with the number of stargazers
 
-`DEMO <http://showterm.io/813bc4e61fc9d752d2cb6#fast>`__ : Display the list of a user's repositories from the profile URL, along with the number of stargazers
+`DEMO <http://showterm.io/5dc39b7fc3d7244577d2f#fast>`__ : Display the list of a user's repositories from the profile URL, along with the number of stargazers
 
-`DEMO <http://showterm.io/459287d10701d531f3506#fast>`__ : Display all the folders and files within a repository recursively from the repository URL, along with their sizes
+`DEMO <http://showterm.io/99e16e6ae35727999eb23#fast>`__ : Display all the folders and files within a repository recursively from the repository URL, along with their sizes
 
-`DEMO <http://showterm.io/09286d1d9b333be0cc9cd#fast>`__ : To get the RAW version of the readme file of a repository from the repository URL
+`DEMO <http://showterm.io/820b37fab14c7ed4cf7ff#fast>`__ : To get the RAW version of the readme file of a repository from the repository URL
 
 Installation
 ============
