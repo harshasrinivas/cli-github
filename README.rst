@@ -9,7 +9,9 @@ Installation
 Using ``pip``
 -------------
 
-``pip3 install clipy_github``
+.. code:: sh
+
+   $ pip3 install clipy_github
 
 From the Source
 ---------------
