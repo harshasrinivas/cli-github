@@ -22,7 +22,7 @@ Using ``pip``
 
 .. code:: sh
 
-   $ pip install clipy_github
+   $ pip install clipy-github
 
 From the Source
 ---------------
@@ -58,13 +58,13 @@ GITHUB\_TOKEN
 
 .. code:: sh
 
-   $ echo "export GITHUB_TOKEN = <your-token-within-quotes>" | sudo tee -a /etc/environment
+   $ echo "export GITHUB_TOKEN = <your-token-with-quotes>" | sudo tee -a /etc/environment
 
 **Github Token as Temporary Environment Variable**
 
 .. code:: sh
 
-   $ GITHUB_TOKEN = <your-token-within-quotes>
+   $ GITHUB_TOKEN = <your-token-with-quotes>
 
 **Without saving your Environment Variable**
 
@@ -78,7 +78,7 @@ Change this line
 
 .. code:: sh
 
-   $ API_TOKEN = os.environ.get('GITHUB_TOKEN') to API_TOKEN = <your-token-within-quotes>
+   $ API_TOKEN = os.environ.get('GITHUB_TOKEN') to API_TOKEN = <your-token-with-quotes>
 
 Options
 =======
