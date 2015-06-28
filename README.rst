@@ -24,8 +24,8 @@ Using ``pip``
 
    $ pip install cli-github
 
-From the Source
----------------
+Latest build from the Source
+----------------------------
 
 -  Clone the repo
    

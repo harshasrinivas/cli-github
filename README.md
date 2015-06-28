@@ -27,7 +27,7 @@ A Python App to display **Github from the command-line**
 
 `pip install cli-github`
 
-##From the Source
+##Get the latest build from the Source
 
 * Clone the repo `git clone https://github.com/harshasrinivas/cli-github.git`
 * Run `python setup.py install`
