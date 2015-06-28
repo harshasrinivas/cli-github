@@ -1,4 +1,5 @@
-unused/
+
 build/
 clipy_github.egg-info/
 dist/
+backup/

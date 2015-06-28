@@ -1,19 +1,15 @@
 from setuptools import setup
 import sys
 
-with open('README.rst') as f:  
-    long_description = f.read()
-
 setup(name = 'clipy-github',
       description = 'Github inside the Command Line',
-      version = '0.1.3',
+      version = '0.1.4',
       author = 'Harsha Srinivas',
       author_email = '95harsha95@gmail.com',
       packages = ['clipy_github'],
       entry_points = {
           'console_scripts': ['clipy-github=clipy_github:main'],
       },
-      long_description=long_description,
       install_requires = [      
                'prettytable',        
       ],

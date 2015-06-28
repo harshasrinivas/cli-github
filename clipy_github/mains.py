@@ -1,89 +1,92 @@
 #! /usr/bin/env python3
+# encoding=utf8
 
-import os, argparse, json, urllib.request, base64
+from __future__ import absolute_import
+import os, argparse, json, base64
+import urllib2, urllib
 from prettytable import PrettyTable
 
-GITHUB_API = 'https://api.github.com/'
+GITHUB_API = u'https://api.github.com/'
 
-API_TOKEN = os.environ.get('GITHUB_TOKEN')
+API_TOKEN = os.environ.get(u'GITHUB_TOKEN')
 
 def main():
-    parser = argparse.ArgumentParser(description='Github within the Command Line')
+    parser = argparse.ArgumentParser(description=u'Github within the Command Line')
     g=parser.add_mutually_exclusive_group()
-    g.add_argument('-n','--username', type=str, 
-            help = "Get repos of the given username")
-    g.add_argument('-u','--url', type=str,
-            help = "Get repos from the user profile's URL")
-    g.add_argument('-r','--recursive',type=str,
-            help = "Get the file structure from the repo link")
-    g.add_argument('-R','--readme',type=str,
-            help = "Get the raw version of the repo readme from repo link")
+    g.add_argument(u'-n',u'--username', type=unicode, 
+            help = u"Get repos of the given username")
+    g.add_argument(u'-u',u'--url', type=unicode,
+            help = u"Get repos from the user profile's URL")
+    g.add_argument(u'-r',u'--recursive',type=unicode,
+            help = u"Get the file structure from the repo link")
+    g.add_argument(u'-R',u'--readme',type=unicode,
+            help = u"Get the raw version of the repo readme from repo link")
     args = parser.parse_args()
     
     if(args.url):
         name=args.url[19:]
-        if name.endswith('/'):
+        if name.endswith(u'/'):
                 name = name[:-1]
-        url = GITHUB_API + 'users/' +name + '/repos'
+        url = GITHUB_API + u'users/' +name + u'/repos'
         
 
     if(args.username):
         name=args.username
-        url = GITHUB_API + 'users/' +name + '/repos'
+        url = GITHUB_API + u'users/' +name + u'/repos'
 
     if(args.recursive):
         name=args.recursive[19:]
-        if name.endswith('/'):
+        if name.endswith(u'/'):
                 name = name[:-1]
-        url = GITHUB_API + 'repos/' +name + '/branches/master'
-        request = urllib.request.Request(url)
-        request.add_header('Authorization', 'token %s' % API_TOKEN)
+        url = GITHUB_API + u'repos/' +name + u'/branches/master'
+        request = urllib2.Request(url)
+        request.add_header(u'Authorization', u'token %s' % API_TOKEN)
         try:
-            response = urllib.request.urlopen(request).read().decode('utf-8')
-        except urllib.error.HTTPError as err:
-            print('-'*150)
-            print("Invalid Credentials. For help, type 'clipy-github -h'")
-            print('-'*150)
+            response = urllib2.urlopen(request).read().decode(u'utf-8')
+        except urllib2.HTTPError, err:
+            print u'-'*150
+            print u"Invalid Credentials. For help, type 'clipy-github -h'"
+            print u'-'*150
             return
  
         jsondata = json.loads(response)
-        sha = jsondata['commit']['commit']['tree']['sha']
-        url=GITHUB_API+'repos/'+name+'/git/trees/'+sha+'?recursive=1'
+        sha = jsondata[u'commit'][u'commit'][u'tree'][u'sha']
+        url=GITHUB_API+u'repos/'+name+u'/git/trees/'+sha+u'?recursive=1'
 
     if(args.readme):
         name=args.readme[19:]
-        if name.endswith('/'):
+        if name.endswith(u'/'):
                 name = name[:-1]
-        url = GITHUB_API + 'repos/' +name + '/readme'
+        url = GITHUB_API + u'repos/' +name + u'/readme'
         
 
-    request = urllib.request.Request(url)
-    request.add_header('Authorization', 'token %s' % API_TOKEN)
+    request = urllib2.Request(url)
+    request.add_header(u'Authorization', u'token %s' % API_TOKEN)
     try:
-        response = urllib.request.urlopen(request).read().decode('utf-8')
-    except urllib.error.HTTPError as err:
-        print('-'*150)
-        print("Invalid Credentials. For help, type 'clipy-github -h'")
-        print('-'*150)
+        response = urllib2.urlopen(request).read().decode(u'utf-8')
+    except urllib2.HTTPError, err:
+        print u'-'*150
+        print u"Invalid Credentials. For help, type 'clipy-github -h'"
+        print u'-'*150
         return
         
     jsondata = json.loads(response)
     if(args.url or args.username):
-        x = PrettyTable([" Repository ", "★ Star"])
+        x = PrettyTable([u" Repository ", u"★ Star"])
         for i in jsondata:
-            x.add_row([i['name'],i['stargazers_count']])
-        print(x)
+            x.add_row([i[u'name'],i[u'stargazers_count']])
+        print x
 
     if(args.recursive):
-        x = PrettyTable([" File/Folder ", " Size (Bytes) "])
-        for i in jsondata['tree']:
-            size='-'
-            path=i['path']+'/'
-            if(i['type']=='blob'):
-                size=i['size']
+        x = PrettyTable([u" File/Folder ", u" Size (Bytes) "])
+        for i in jsondata[u'tree']:
+            size=u'-'
+            path=i[u'path']+u'/'
+            if(i[u'type']==u'blob'):
+                size=i[u'size']
                 path=path[:-1]
             x.add_row([path,size])
-        print(x)
+        print x
             
     if(args.readme):
-        print(base64.b64decode(jsondata['content']).decode('utf-8'));
+        print base64.b64decode(jsondata[u'content']).decode(u'utf-8');
