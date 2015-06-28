@@ -1,4 +1,4 @@
-#`clipy-github`
+#`cli-github`
 
 A Python App to display **Github from the command-line**
 
@@ -6,30 +6,30 @@ A Python App to display **Github from the command-line**
 
 `To fetch repos and stars using the username`
 
-![Username](https://github.com/harshasrinivas/clipy-github/blob/master/images/name.png)
+![Username](https://github.com/harshasrinivas/cli-github/blob/master/images/name.png)
 
 `To fetch repos and stars using the profile URL`
 
-![URL](https://github.com/harshasrinivas/clipy-github/blob/master/images/url.png)
+![URL](https://github.com/harshasrinivas/cli-github/blob/master/images/url.png)
 
 `To get all the files and folders within a repo from its link`
 
-![Tree](https://github.com/harshasrinivas/clipy-github/blob/master/images/tree.png)
+![Tree](https://github.com/harshasrinivas/cli-github/blob/master/images/tree.png)
 
 `To get the RAW version of readme file from the repo link`
 
-![Readme](https://github.com/harshasrinivas/clipy-github/blob/master/images/readme.png)
+![Readme](https://github.com/harshasrinivas/cli-github/blob/master/images/readme.png)
 
 
 #Installation
 
 ##Using `pip`
 
-`pip install clipy-github`
+`pip install cli-github`
 
 ##From the Source
 
-* Clone the repo `git clone https://github.com/harshasrinivas/clipy-github.git`
+* Clone the repo `git clone https://github.com/harshasrinivas/cli-github.git`
 * Run `python setup.py install`
 
 ##Dependencies
@@ -49,7 +49,7 @@ A Python App to display **Github from the command-line**
 
 **Without saving your Environment Variable**
 
-Open the `clipy_github/mains.py` file
+Open the `cli_github/mains.py` file
 
 Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <your-token-with-quotes> `
 
@@ -75,19 +75,19 @@ Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <y
 
 Display the list of a user's repositories from the username, along with the number of stargazers
 
-`$ clipy-github -n harshasrinivas`
+`$ cli-github -n harshasrinivas`
 
 Display the list of a user's repositories from the profile URL, along with the number of stargazers
 
-`$ clipy-github -u https://github.com/harshasrinivas`
+`$ cli-github -u https://github.com/harshasrinivas`
 
 Display all the files and folders within a repository recursively from the repository URL, along with their sizes
 
-`$ clipy-github -r https://github.com/harshasrinivas/clipy-github`
+`$ cli-github -r https://github.com/harshasrinivas/cli-github`
 
 Get the RAW version of the readme file of a repository from the repository URL
 
-`$ clipy-github -R https://github.com/harshasrinivas/clipy-github`
+`$ cli-github -R https://github.com/harshasrinivas/cli-github`
 
 
 #Live Demo
@@ -108,4 +108,4 @@ If you want to add features, improve them, or report issues, feel free to send a
 
 #License
 
-![GPL V3](https://raw.githubusercontent.com/harshasrinivas/clipy-github/master/images/gpl.png)
+![GPL V3](https://raw.githubusercontent.com/harshasrinivas/cli-github/master/images/gpl.png)

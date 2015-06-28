@@ -1,20 +1,20 @@
 from setuptools import setup
 import sys
 
-setup(name = 'clipy-github',
+setup(name = 'cli-github',
       description = 'Github inside the Command Line',
-      version = '0.1.4',
+      version = '1.0.1',
       license = 'GPL v3.0',
       author = 'Harsha Srinivas',
       author_email = '95harsha95@gmail.com',
-      packages = ['clipy_github'],
+      packages = ['cli_github'],
       entry_points = {
-          'console_scripts': ['clipy-github=clipy_github:main'],
+          'console_scripts': ['cli-github=cli_github:main'],
       },
       install_requires = [      
                'prettytable',        
       ],
-      url = 'https://github.com/harshasrinivas/clipy-github/',
+      url = 'https://github.com/harshasrinivas/cli-github/',
       keywords = ['github', 'CLI', 'github-within-CLI', 'python'],
       classifiers = [
           'Operating System :: POSIX',

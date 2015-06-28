@@ -1,4 +1,4 @@
-clipy-github
+cli-github
 ============
 
 A Python App to display **Github from the command-line**
@@ -22,7 +22,7 @@ Using ``pip``
 
 .. code:: sh
 
-   $ pip install clipy-github
+   $ pip install cli-github
 
 From the Source
 ---------------
@@ -31,7 +31,7 @@ From the Source
    
    .. code:: sh
       
-      $ git clone https://github.com/harshasrinivas/clipy-github.git
+      $ git clone https://github.com/harshasrinivas/cli-github.git
 
 -  Run 
    
@@ -72,7 +72,7 @@ Open the file
 
 .. code:: sh
 
-   $ clipy_github/mains.py
+   $ cli_github/mains.py
 
 Change this line 
 
@@ -102,27 +102,27 @@ Display the list of a user's repositories from the username
 
 .. code:: sh
 
-   $ clipy-github -n harshasrinivas
+   $ cli-github -n harshasrinivas
 
 Display the list of a user's repositories from the profile URL
 
 .. code:: sh
 
-   $ clipy-github -u https://github.com/harshasrinivas
+   $ cli-github -u https://github.com/harshasrinivas
 
 Display all the files and folders within a repository recursively from
 the repository URL
 
 .. code:: sh
 
-   $ clipy-github -r https://github.com/harshasrinivas/clipy-github
+   $ cli-github -r https://github.com/harshasrinivas/cli-github
 
 Get the RAW version of the readme file of a repository from the
 repository URL
 
 .. code:: sh
 
-   $ clipy-github -R https://github.com/harshasrinivas/clipy-github
+   $ cli-github -R https://github.com/harshasrinivas/cli-github
 
 Contribute
 ==========

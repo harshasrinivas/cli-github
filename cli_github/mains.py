@@ -45,7 +45,7 @@ def main():
             response = urllib2.urlopen(request).read().decode(u'utf-8')
         except urllib2.HTTPError, err:
             print u'-'*150
-            print u"Invalid Credentials. For help, type 'clipy-github -h'"
+            print u"Invalid Credentials. For help, type 'cli-github -h'"
             print u'-'*150
             return
  
@@ -66,7 +66,7 @@ def main():
         response = urllib2.urlopen(request).read().decode(u'utf-8')
     except urllib2.HTTPError, err:
         print u'-'*150
-        print u"Invalid Credentials. For help, type 'clipy-github -h'"
+        print u"Invalid Credentials. For help, type 'cli-github -h'"
         print u'-'*150
         return
         
