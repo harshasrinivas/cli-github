@@ -6,19 +6,19 @@ A Python App to display **Github from the command-line**
 
 `To fetch repos and stars using the username`
 
-![Username](images/name.png)
+![Username](https://github.com/harshasrinivas/clipy-github/blob/master/images/name.png)
 
 `To fetch repos and stars using the profile URL`
 
-![URL](images/url.png)
+![URL](https://github.com/harshasrinivas/clipy-github/blob/master/images/url.png)
 
 `To get all the files and folders within a repo from its link`
 
-![Tree](images/tree.png)
+![Tree](https://github.com/harshasrinivas/clipy-github/blob/master/images/tree.png)
 
 `To get the RAW version of readme file from the repo link`
 
-![Readme](images/readme.png)
+![Readme](https://github.com/harshasrinivas/clipy-github/blob/master/images/readme.png)
 
 
 #Installation
