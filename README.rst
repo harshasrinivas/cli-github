@@ -17,8 +17,16 @@ From the Source
 ---------------
 
 -  Clone the repo
-   ``git clone https://github.com/harshasrinivas/clipy-github.git``
--  Run ``python3 setup.py install``
+   
+   .. code:: sh
+      
+      $ git clone https://github.com/harshasrinivas/clipy-github.git
+
+-  Run 
+   
+   .. code:: sh
+   
+      $ python3 setup.py install
 
 Setting Up
 ==========
@@ -28,18 +36,29 @@ Setting Up
 Set your Github Personal Access Token as the environment variable
 GITHUB\_TOKEN
 
-``echo "export GITHUB_TOKEN = <your-token-within-quotes>" >> /etc/environment``
+.. code:: sh
+
+   $ echo "export GITHUB_TOKEN = <your-token-within-quotes>" >> /etc/environment
 
 **Github Token as Temporary Environment Variable**
 
-``GITHUB_TOKEN = <your-token-within-quotes>``
+.. code:: sh
+
+   $ GITHUB_TOKEN = <your-token-within-quotes>
 
 **Without saving your Environment Variable**
 
-Open the ``clipy_github/mains.py`` file
+Open the file 
 
-Change this line ``API_TOKEN = os.environ.get('GITHUB_TOKEN')`` to
-``API_TOKEN = <your-token-within-quotes>``
+.. code:: sh
+
+   $ clipy_github/mains.py
+
+Change this line 
+
+.. code:: sh
+
+   $ API_TOKEN = os.environ.get('GITHUB_TOKEN') to API_TOKEN = <your-token-within-quotes>
 
 Options
 =======
@@ -61,21 +80,29 @@ Usage
 
 Display the list of a user's repositories from the username
 
-``clipy-github -n harshasrinivas``
+.. code:: sh
+
+   $ clipy-github -n harshasrinivas
 
 Display the list of a user's repositories from the profile URL
 
-``clipy-github -u https://github.com/harshasrinivas``
+.. code:: sh
+
+   $ clipy-github -u https://github.com/harshasrinivas
 
 Display all the files and folders within a repository recursively from
 the repository URL
 
-``clipy-github -r https://github.com/harshasrinivas/clipy-github``
+.. code:: sh
+
+   $ clipy-github -r https://github.com/harshasrinivas/clipy-github
 
 Get the RAW version of the readme file of a repository from the
 repository URL
 
-``clipy-github -R https://github.com/harshasrinivas/clipy-github``
+.. code:: sh
+
+   $ clipy-github -R https://github.com/harshasrinivas/clipy-github
 
 Contribute
 ==========
