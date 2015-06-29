@@ -65,13 +65,13 @@ GITHUB\_TOKEN
 
 .. code:: sh
 
-   $ echo "export GITHUB_TOKEN = <your-token-with-quotes>" | sudo tee -a /etc/environment
+   $ echo "export GITHUB_TOKEN=<your-token-with-quotes>" | sudo tee -a /etc/environment
 
 **Github Token as Temporary Environment Variable**
 
 .. code:: sh
 
-   $ GITHUB_TOKEN = <your-token-with-quotes>
+   $ GITHUB_TOKEN=<your-token-with-quotes>
 
 **Without saving your Environment Variable**
 
