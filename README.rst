@@ -3,11 +3,11 @@ cli-github
 
 A Python App to display **Github from the command-line**
 
-+------------------+
-|  Test Coverage   |
-+==================+
-| |Test Coverage|  | 
-+------------------+
++------------------+-----------+--------------+
+|   Build Status   |  Version  |   Downloads  |
++==================+===========+==============+
+|  |Build Status|  | |Version| |  |Downloads| |
++------------------+-----------+--------------+
 
 
 Live Demo
@@ -137,6 +137,11 @@ Contribute
 If you want to add features, improve them, or report issues, feel free
 to send a pull request.
 
+.. |Build Status| image:: https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master
+      :target: https://travis-ci.org/harshasrinivas/cli-github
 
-.. |Test Coverage| image::  https://coveralls.io/repos/harshasrinivas/cli-github/badge.svg 
-   :target: https://coveralls.io/r/harshasrinivas/cli-github
+.. |Version| image:: https://badge.fury.io/py/cli-github.svg
+      :target: http://badge.fury.io/py/cli-github
+      
+.. |Downloads| image:: https://img.shields.io/pypi/dd/cli-github.svg
+      :target: https://pypi.python.org/pypi/cli-github

@@ -2,6 +2,10 @@
 
 Python App to display **Github from the command-line**
 
+| Build Status |  Version |  Downloads  |
+| ------------ | -------- |  ---------  |
+| [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli-github.svg)](http://badge.fury.io/py/cli-github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
+
 #Screenshots
 
 `To fetch repos and stars using the username`
