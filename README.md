@@ -1,6 +1,6 @@
 #`cli-github`
 
-A Python App to display **Github from the command-line**
+Python App to display **Github from the command-line**
 
 #Screenshots
 
