@@ -3,11 +3,11 @@ cli-github
 
 A Python App to display **Github from the command-line**
 
-+------------------+
-|   Build Status   |
-+==================+
-|  |Build Status|  | 
-+------------------+
++------------------+-----------+--------------+
+|   Build Status   |  Version  |   Downloads  |
++==================+===========+==============+
+|  |Build Status|  | |Version| |  |Downloads| |
++------------------+-----------+--------------+
 
 
 Live Demo
@@ -139,3 +139,9 @@ to send a pull request.
 
 .. |Build Status| image:: https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master
       :target: https://travis-ci.org/harshasrinivas/cli-github
+
+.. |Version| image:: https://badge.fury.io/py/cli-github.svg
+      :target: http://badge.fury.io/py/cli-github
+      
+.. |Downloads| image:: https://img.shields.io/pypi/dd/cli-github.svg
+      :target: https://pypi.python.org/pypi/cli-github
