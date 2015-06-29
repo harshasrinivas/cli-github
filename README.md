@@ -2,6 +2,10 @@
 
 Python App to display **Github from the command-line**
 
+| Build Status | 
+| ------------ | 
+| [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | 
+
 #Screenshots
 
 `To fetch repos and stars using the username`
