@@ -2,10 +2,6 @@
 
 Python App to display **Github from the command-line**
 
-| Test Coverage |
-| ------------- |
-| [![Coverage Status](https://coveralls.io/repos/harshasrinivas/cli-github/badge.svg)](https://coveralls.io/r/harshasrinivas/cli-github) |
-
 #Screenshots
 
 `To fetch repos and stars using the username`
