@@ -5,6 +5,8 @@ from __future__ import absolute_import
 import os, sys, argparse, json, base64
 import urllib2, urllib
 from prettytable import PrettyTable
+from string import *
+
 
 GITHUB_API = u'https://api.github.com/'
 
@@ -25,32 +27,63 @@ def main():
     if len(sys.argv)==1:
         parser.print_help()
         return
-    
+
     args = parser.parse_args()
-    
-    if(args.url):
-        name=args.url[19:]
-        if name.endswith(u'/'):
-                name = name[:-1]
-        url = GITHUB_API + u'users/' +name + u'/repos'
         
+    if(args.url):
+        name=args.url
+        n=name.find(u"github.com")
+        if(n>=0):
+            if(n!=0):
+                n2=name.find(u"http://github.com")
+                n3=name.find(u"https://github.com")
+                if(n2*n3!=0):
+                    print u'-'*150
+                    print u"Enter a valid URL. For help, type 'cli-github -h'"
+                    print u'-'*150
+                    return
+            name=args.url[n+11:]
+            if name.endswith(u'/'):
+                name = name[:-1]
+            url = GITHUB_API + u'users/' +name + u'/repos'
+        else:
+            print u'-'*150
+            print u"Enter a valid URL. For help, type 'cli-github -h'"
+            print u'-'*150
+            return
 
     if(args.username):
         name=args.username
         url = GITHUB_API + u'users/' +name + u'/repos'
 
     if(args.recursive):
-        name=args.recursive[19:]
-        if name.endswith(u'/'):
-                name = name[:-1]
-        url = GITHUB_API + u'repos/' +name + u'/branches/master'
-        request = urllib2.Request(url)
-        request.add_header(u'Authorization', u'token %s' % API_TOKEN)
-        try:
-            response = urllib2.urlopen(request).read().decode(u'utf-8')
-        except urllib2.HTTPError, err:
+        name=args.recursive
+        n=name.find(u"github.com")
+        if(n>=0):
+            if(n!=0):
+                n2=name.find(u"http://github.com")
+                n3=name.find(u"https://github.com")
+                if(n2*n3!=0):
+                    print u'-'*150
+                    print u"Enter a valid URL. For help, type 'cli-github -h'"
+                    print u'-'*150
+                    return
+            name=args.recursive[n+11:]
+            if name.endswith(u'/'):
+                    name = name[:-1]
+            url = GITHUB_API + u'repos/' +name + u'/branches/master'
+            request = urllib2.Request(url)
+            request.add_header(u'Authorization', u'token %s' % API_TOKEN)
+            try:
+                response = urllib2.urlopen(request).read().decode(u'utf-8')
+            except urllib2.HTTPError, err:
+                print u'-'*150
+                print u"Invalid Credentials. For help, type 'cli-github -h'"
+                print u'-'*150
+                return
+        else:
             print u'-'*150
-            print u"Invalid Credentials. For help, type 'cli-github -h'"
+            print u"Enter a valid URL. For help, type 'cli-github -h'"
             print u'-'*150
             return
  
@@ -59,10 +92,27 @@ def main():
         url=GITHUB_API+u'repos/'+name+u'/git/trees/'+sha+u'?recursive=1'
 
     if(args.readme):
-        name=args.readme[19:]
-        if name.endswith(u'/'):
-                name = name[:-1]
-        url = GITHUB_API + u'repos/' +name + u'/readme'
+        name=args.readme
+        n=name.find(u"github.com")
+        if(n>=0):
+            if(n!=0):
+                n2=name.find(u"http://github.com")
+                n3=name.find(u"https://github.com")
+                if(n2*n3!=0):
+                    print u'-'*150
+                    print u"Enter a valid URL. For help, type 'cli-github -h'"
+                    print u'-'*150
+                    return
+        
+            name=args.readme[n+11:]
+            if name.endswith(u'/'):
+                    name = name[:-1]
+            url = GITHUB_API + u'repos/' +name + u'/readme'
+        else:
+            print u'-'*150
+            print u"Enter a valid URL. For help, type 'cli-github -h'"
+            print u'-'*150
+            return
         
 
     request = urllib2.Request(url)
@@ -71,7 +121,7 @@ def main():
         response = urllib2.urlopen(request).read().decode(u'utf-8')
     except urllib2.HTTPError, err:
         print u'-'*150
-        print u"Invalid Credentials. For help, type 'cli-github -h'"
+        print u"Invalid Credentials. For help, type 'clipy-github -h'"
         print u'-'*150
         return
         
@@ -95,3 +145,4 @@ def main():
             
     if(args.readme):
         print base64.b64decode(jsondata[u'content']).decode(u'utf-8');
+
