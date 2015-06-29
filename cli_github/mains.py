@@ -135,7 +135,7 @@ def main():
 
     if(args.recursive):
         x = PrettyTable([u" File/Folder ", u" Size (Bytes) "])
-        x.align[u" Repository "] = u"l"
+        x.align[u" File/Folder "] = u"l"
         for i in jsondata[u'tree']:
             size=u'-'
             path=i[u'path']+u'/'
