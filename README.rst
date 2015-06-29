@@ -4,9 +4,9 @@ cli-github
 A Python App to display **Github from the command-line**
 
 +------------------+
-|  Test Coverage   |
+|   Build Status   |
 +==================+
-| |Test Coverage|  | 
+|  |Build Status|  | 
 +------------------+
 
 
@@ -137,6 +137,5 @@ Contribute
 If you want to add features, improve them, or report issues, feel free
 to send a pull request.
 
-
-.. |Test Coverage| image::  https://coveralls.io/repos/harshasrinivas/cli-github/badge.svg 
-   :target: https://coveralls.io/r/harshasrinivas/cli-github
+.. |Build Status| image:: https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master
+      :target: https://travis-ci.org/harshasrinivas/cli-github
