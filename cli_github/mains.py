@@ -128,12 +128,14 @@ def main():
     jsondata = json.loads(response)
     if(args.url or args.username):
         x = PrettyTable([u" Repository ", u"★ Star"])
+        x.align[u" Repository "] = u"l"
         for i in jsondata:
             x.add_row([i[u'name'],i[u'stargazers_count']])
         print x
 
     if(args.recursive):
         x = PrettyTable([u" File/Folder ", u" Size (Bytes) "])
+        x.align[u" Repository "] = u"l"
         for i in jsondata[u'tree']:
             size=u'-'
             path=i[u'path']+u'/'
