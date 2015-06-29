@@ -1,6 +1,6 @@
 #`cli-github`
 
-A Python App to display **Github from the command-line**
+Python App to display **Github from the command-line**
 
 #Screenshots
 
@@ -41,11 +41,11 @@ A Python App to display **Github from the command-line**
 
 **Github Token as Temporary Environment Variable**
 
-`$ GITHUB_TOKEN = <your-token-with-quotes>`
+`$ GITHUB_TOKEN=<your-token-with-quotes>`
 
 **Github Token as Permanent Environment Variable**
 
-`$ echo "export GITHUB_TOKEN = <your-token-with-quotes>" | sudo tee -a /etc/environment`
+`$ echo "export GITHUB_TOKEN=<your-token-with-quotes>" | sudo tee -a /etc/environment`
 
 **Without saving your Environment Variable**
 

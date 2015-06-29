@@ -3,6 +3,13 @@ cli-github
 
 A Python App to display **Github from the command-line**
 
++------------------+
+|  Test Coverage   |
++==================+
+| |Test Coverage|  | 
++------------------+
+
+
 Live Demo
 =========
 
@@ -58,13 +65,13 @@ GITHUB\_TOKEN
 
 .. code:: sh
 
-   $ echo "export GITHUB_TOKEN = <your-token-with-quotes>" | sudo tee -a /etc/environment
+   $ echo "export GITHUB_TOKEN=<your-token-with-quotes>" | sudo tee -a /etc/environment
 
 **Github Token as Temporary Environment Variable**
 
 .. code:: sh
 
-   $ GITHUB_TOKEN = <your-token-with-quotes>
+   $ GITHUB_TOKEN=<your-token-with-quotes>
 
 **Without saving your Environment Variable**
 
@@ -129,3 +136,7 @@ Contribute
 
 If you want to add features, improve them, or report issues, feel free
 to send a pull request.
+
+
+.. |Test Coverage| image::  https://coveralls.io/repos/harshasrinivas/cli-github/badge.svg 
+   :target: https://coveralls.io/r/harshasrinivas/cli-github
