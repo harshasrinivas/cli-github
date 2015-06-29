@@ -3,6 +3,13 @@ cli-github
 
 A Python App to display **Github from the command-line**
 
++------------------+
+|  Test Coverage   |
++==================+
+| |Test Coverage|  | 
++------------------+
+
+
 Live Demo
 =========
 
@@ -129,3 +136,7 @@ Contribute
 
 If you want to add features, improve them, or report issues, feel free
 to send a pull request.
+
+
+.. |Test Coverage| image::  https://coveralls.io/repos/harshasrinivas/cli-github/badge.svg 
+   :target: https://coveralls.io/r/harshasrinivas/cli-github
