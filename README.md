@@ -9,6 +9,7 @@ Python App to display **Github from the command-line**
 
 ##Version 1.0.3
 * Fixed URL parsing bugs
+* Left Indented repo names
 
 #Screenshots
 
