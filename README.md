@@ -4,7 +4,8 @@ Python App to display **Github from the command-line**
 
 | Build Status |  Version |  Downloads  |
 | ------------ | -------- |  ---------  |
-| [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli-github.svg)](http://badge.fury.io/py/cli-github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
+| [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli-github.png)](http://badge.fury.io/py/cli-github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
+
 
 ##Version 1.0.3
 * Fixed URL parsing bugs
