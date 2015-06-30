@@ -13,6 +13,7 @@ Version 1.0.3
 -------------
 - Fixed URL parsing bugs
 - Left Indented repo names
+- Fixed Python 2/3 compatibility issues
 
 Live Demo
 =========
