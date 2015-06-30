@@ -35,9 +35,10 @@ def main():
         n=name.find(u"github.com")
         if(n>=0):
             if(n!=0):
+                n1=name.find(u"www.github.com")
                 n2=name.find(u"http://github.com")
                 n3=name.find(u"https://github.com")
-                if(n2*n3!=0):
+                if(n1*n2*n3!=0):
                     print u'-'*150
                     print u"Enter a valid URL. For help, type 'cli-github -h'"
                     print u'-'*150
@@ -61,9 +62,10 @@ def main():
         n=name.find(u"github.com")
         if(n>=0):
             if(n!=0):
+                n1=name.find(u"www.github.com")
                 n2=name.find(u"http://github.com")
                 n3=name.find(u"https://github.com")
-                if(n2*n3!=0):
+                if(n1*n2*n3!=0):
                     print u'-'*150
                     print u"Enter a valid URL. For help, type 'cli-github -h'"
                     print u'-'*150
@@ -96,9 +98,10 @@ def main():
         n=name.find(u"github.com")
         if(n>=0):
             if(n!=0):
+                n1=name.find(u"www.github.com")
                 n2=name.find(u"http://github.com")
                 n3=name.find(u"https://github.com")
-                if(n2*n3!=0):
+                if(n1*n2*n3!=0):
                     print u'-'*150
                     print u"Enter a valid URL. For help, type 'cli-github -h'"
                     print u'-'*150
