@@ -12,7 +12,7 @@ Click `here <http://showterm.io/38d628a202209e1136afd#fast>`__ to see it live in
 |  |Build Status|  | |Version| |  |Downloads| |
 +------------------+-----------+--------------+
 
-Version 1.0.4
+Version 1.0.5
 -------------
 - Fixed URL parsing bugs
 - Left Indented repo names
