@@ -3,7 +3,7 @@ import sys
 
 setup(name = 'cli-github',
       description = 'Github inside the Command Line',
-      version = '1.0.4',
+      version = '1.0.5',
       license = 'GPL v3.0',
       author = 'Harsha Srinivas',
       author_email = '95harsha95@gmail.com',
@@ -14,6 +14,7 @@ setup(name = 'cli-github',
       install_requires = [      
                'prettytable',     
                'future',
+               'python-dateutil'
       ],
       url = 'https://github.com/harshasrinivas/cli-github/',
       keywords = ['github', 'CLI', 'github-within-CLI', 'python'],

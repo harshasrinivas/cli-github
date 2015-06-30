@@ -6,7 +6,7 @@ from __future__ import absolute_import
 from future.standard_library import install_aliases
 install_aliases()
 
-import os, sys, argparse, json, urllib.request, base64
+import os, sys, argparse, json, urllib.request, base64, dateutil.parser
 from prettytable import PrettyTable
 from string import *
 
@@ -26,13 +26,18 @@ def main():
             help = "Get the file structure from the repo link")
     g.add_argument('-R','--readme',type=str,
             help = "Get the raw version of the repo readme from repo link")
+    g.add_argument('-re','--releases',type=str,
+            help = "Get the list of releases from repo link")
     
+
     if len(sys.argv)==1:
         parser.print_help()
         return
 
     args = parser.parse_args()
-        
+    
+#URL
+
     if(args.url):
         name=args.url
         n=name.find("github.com")
@@ -56,9 +61,13 @@ def main():
             print('-'*150)
             return
 
+#USERNAME
+
     if(args.username):
         name=args.username
         url = GITHUB_API + 'users/' +name + '/repos'
+
+#TREE
 
     if(args.recursive):
         name=args.recursive
@@ -96,6 +105,8 @@ def main():
         sha = jsondata['commit']['commit']['tree']['sha']
         url=GITHUB_API+'repos/'+name+'/git/trees/'+sha+'?recursive=1'
 
+#README
+
     if(args.readme):
         name=args.readme
         n=name.find("github.com")
@@ -119,7 +130,31 @@ def main():
             print("Enter a valid URL. For help, type 'cli-github -h'")
             print('-'*150)
             return
-        
+
+#RELEASES
+    
+    if(args.releases):
+        name=args.releases
+        n=name.find("github.com")
+        if(n>=0):
+            if(n!=0):
+                n1=name.find("www.github.com")
+                n2=name.find("http://github.com")
+                n3=name.find("https://github.com")
+                if(n1*n2*n3!=0):
+                    print('-'*150)
+                    print("Enter a valid URL. For help, type 'cli-github -h'")
+                    print('-'*150)
+                    return
+            name=args.releases[n+11:]
+            if name.endswith('/'):
+                    name = name[:-1]
+            url = GITHUB_API + 'repos/' +name + '/releases'
+        else:
+            print('-'*150)
+            print("Enter a valid URL. For help, type 'cli-github -h'")
+            print('-'*150)
+            return
 
     request = urllib.request.Request(url)
     request.add_header('Authorization', 'token %s' % API_TOKEN)
@@ -134,14 +169,12 @@ def main():
     jsondata = json.loads(response)
     if(args.url or args.username):
         x = PrettyTable([" Repository ", "★ Star"])
-        x.align[u" Repository "] = u"l"
         for i in jsondata:
             x.add_row([i['name'],i['stargazers_count']])
         print(x)
 
     if(args.recursive):
         x = PrettyTable([" File/Folder ", " Size (Bytes) "])
-        x.align[u" File/Folder "] = u"l"
         for i in jsondata['tree']:
             size='-'
             path=i['path']+'/'
@@ -154,3 +187,18 @@ def main():
     if(args.readme):
         print(base64.b64decode(jsondata['content']).decode('utf-8'));
 
+    if(args.releases):
+        x = PrettyTable([" Release name "," Release Date "," Release Time "])
+        
+        for i in jsondata:
+            ti = dateutil.parser.parse(i['published_at'])
+            ti = str(ti)
+            date = ti[:10]
+            time = ti[11:]
+            time = time[:5]
+            time = time + ' UTC'
+            x.add_row([i['tag_name'],date,time])
+        print(x)
+
+if __name__ == '__main__':
+    main()

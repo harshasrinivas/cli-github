@@ -17,6 +17,7 @@ Version 1.0.4
 - Fixed URL parsing bugs
 - Left Indented repo names
 - Fixed Python 2/3 compatibility issues
+- Option to list releases of a user's repo
 
 Live Demo
 =========
@@ -28,6 +29,8 @@ Live Demo
 `DEMO <http://showterm.io/99e16e6ae35727999eb23#fast>`__ : Display all the folders and files within a repository recursively from the repository URL, along with their sizes
 
 `DEMO <http://showterm.io/820b37fab14c7ed4cf7ff#fast>`__ : To get the RAW version of the readme file of a repository from the repository URL
+
+`DEMO <http://showterm.io/24a6ceec356bb672ec24f#fast>`__ : To get the list of releases from the user's repository URL
 
 Installation
 ============
@@ -62,6 +65,20 @@ Dependencies
    .. code:: sh
    
       $ pip install prettytable
+
+
+-  ``future``
+
+   .. code:: sh
+     
+      $ pip install future
+
+- ``python-dateutil``
+
+  .. code:: sh
+
+     $ pip install python-dateutil
+
 
 Setting Up
 ==========
@@ -101,6 +118,8 @@ Options
                         Get the file structure from the repo link URL
     -R README, --readme README
                         Get the raw version of the repository readme file from repo link URL
+    -re RELEASES, --releases RELEASES
+                        Get the list of releases from repo link
 
 Usage
 =====
@@ -126,6 +145,12 @@ the repository URL
 
 Get the RAW version of the readme file of a repository from the
 repository URL
+
+.. code:: sh
+
+   $ cli-github -R https://github.com/harshasrinivas/cli-github
+
+Get the list of releases from the user's repository URL
 
 .. code:: sh
 

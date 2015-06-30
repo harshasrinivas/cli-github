@@ -10,10 +10,11 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 | [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
 
 
-##Version 1.0.4
+##Version 1.0.5
 * Fixed URL parsing bugs
 * Left Indented repo names
 * Fixed Python 2/3 compatibility issues
+* Option to list releases of a user's repo
 
 #Screenshots
 
@@ -33,6 +34,10 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 
 ![Readme](https://github.com/harshasrinivas/cli-github/blob/master/images/readme.png)
 
+`To get the list of releases of a user's repository`
+
+![Releases](https://github.com/harshasrinivas/cli-github/blob/master/images/releases.png)
+
 
 #Installation
 
@@ -48,7 +53,8 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 ##Dependencies
 
 * prettytable `pip install prettytable`
-
+* future `pip install future`
+* python-dateutil `pip install python-dateutil`
 
 #Setting Up
 
@@ -78,6 +84,8 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
                     Get the file structure from the repo link URL
 -R README, --readme README
                     Get the raw version of the repository readme file from repo link URL
+-re RELEASES, --releases RELEASES
+                 	Get the list of releases from repo link
 ```
 
 
@@ -100,6 +108,9 @@ Get the RAW version of the readme file of a repository from the repository URL
 
 `$ cli-github -R https://github.com/harshasrinivas/cli-github`
 
+Get the list of releases from the user's repo link
+
+`$ cli-github -re https://github.com/sananth12/ImageScraper`
 
 #Live Demo
 
@@ -111,6 +122,7 @@ Get the RAW version of the readme file of a repository from the repository URL
 
 [**DEMO**](http://showterm.io/820b37fab14c7ed4cf7ff#fast) : To get the RAW version of the readme file of a repository from the repository URL
 
+[**DEMO**](http://showterm.io/24a6ceec356bb672ec24f#fast) : To get the list of releases from the user's repository URL
 
 #Contribute
 
