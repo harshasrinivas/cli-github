@@ -9,6 +9,9 @@ A Python App to display **Github from the command-line**
 |  |Build Status|  | |Version| |  |Downloads| |
 +------------------+-----------+--------------+
 
+Version 1.0.3
+-------------
+- Fixed URL parsing bugs
 
 Live Demo
 =========
