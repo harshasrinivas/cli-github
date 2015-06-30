@@ -7,7 +7,7 @@ Python App to display **Github from the command-line**
 | [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli-github.png)](http://badge.fury.io/py/cli-github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
 
 
-##Version 1.0.3
+##Version 1.0.4
 * Fixed URL parsing bugs
 * Left Indented repo names
 * Fixed Python 2/3 compatibility issues
