@@ -62,9 +62,7 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 
 **Without saving your Environment Variable**
 
-Open the `cli_github/mains.py` file
-
-Change this line `API_TOKEN = os.environ.get('GITHUB_TOKEN')` to `API_TOKEN = <your-token-with-quotes> `
+`$ cat cli_github/mains.py | sed -e "s/API_TOKEN = os.environ.get('GITHUB_TOKEN')/API_TOKEN = <your-token-with-quotes>/" > cli_github/mains.py`
 
 <br>
 
