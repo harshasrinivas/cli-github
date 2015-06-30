@@ -5,6 +5,8 @@ python:
   - "3.4"
 # command to install dependencies
 install:
+  - pip install prettytable
+  - pip install future
   - pip install setuptools --upgrade
   - pip install cli-github
 # command to run tests
