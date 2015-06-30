@@ -1,6 +1,9 @@
 #`cli-github`
 
-Python App to display **Github from the command-line**
+**A Command-Line Python Application to display Github from the command-line**. 
+
+Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live in action!
+-----------------------------------------------------------------------------------------
 
 | Build Status |  Version |  Downloads  |
 | ------------ | -------- |  ---------  |
