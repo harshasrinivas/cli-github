@@ -10,11 +10,12 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 | [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
 
 
-##Version 1.0.5
+##Version 1.0.6
 * Fixed URL parsing bugs
 * Left Indented repo names
 * Fixed Python 2/3 compatibility issues
 * Option to list releases of a user's repo
+* Option to download tarball/zipball from repo link
 
 #Screenshots
 
@@ -37,6 +38,14 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 `To get the list of releases of a user's repository`
 
 ![Releases](https://github.com/harshasrinivas/cli-github/blob/master/images/releases.png)
+
+`Download the tarball of a user's repository`
+
+![Tarball](https://github.com/harshasrinivas/cli-github/blob/master/images/dt.png)
+
+`Download the zipball of a user's repository`
+
+![Zipball](https://github.com/harshasrinivas/cli-github/blob/master/images/dz.png)
 
 
 #Installation
@@ -75,7 +84,7 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 #Options
 
 ```sh
--h, --help            show this help message and exit
+-h, --help          show this help message and exit
 -n USERNAME, --username USERNAME
                     Get the list of repositories of the given username
 -u URL, --url URL 
@@ -86,6 +95,10 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
                     Get the raw version of the repository readme file from repo link URL
 -re RELEASES, --releases RELEASES
                  	Get the list of releases from repo link
+-dt TARBALL, --tarball TARBALL
+                    Download the tarball from repo link
+-dz ZIPBALL, --zipball ZIPBALL
+					Download the zipball from repo link
 ```
 
 
@@ -112,6 +125,15 @@ Get the list of releases from the user's repo link
 
 `$ cli-github -re https://github.com/sananth12/ImageScraper`
 
+Download the tarball of the any repo
+
+`$ cli-github -dt https://github.com/harshasrinivas/URL-screenshot`
+
+Download the zipball of the any repo
+
+`$ cli-github -dz https://github.com/harshasrinivas/URL-screenshot`
+
+
 #Live Demo
 
 [**DEMO**](http://showterm.io/aaa79dee63aad0695e304#fast) : Display the list of a user's repositories from the username, along with the number of stargazers
@@ -123,6 +145,11 @@ Get the list of releases from the user's repo link
 [**DEMO**](http://showterm.io/820b37fab14c7ed4cf7ff#fast) : To get the RAW version of the readme file of a repository from the repository URL
 
 [**DEMO**](http://showterm.io/24a6ceec356bb672ec24f#fast) : To get the list of releases from the user's repository URL
+
+[**DEMO**](http://showterm.io/bb2245e764781b11b1b78#fast) : Download the tarball from the user's repository URL
+
+[**DEMO**](http://showterm.io/910e8e424f28cfe3b4a22#fast) : Download the zipball from the user's repository URL
+
 
 #Contribute
 

@@ -1,4 +1,3 @@
-#! /usr/bin/env python3
 # encoding=utf8
 
 from __future__ import print_function
@@ -28,6 +27,10 @@ def main():
             help = "Get the raw version of the repo readme from repo link")
     g.add_argument('-re','--releases',type=str,
             help = "Get the list of releases from repo link")
+    g.add_argument('-dt','--tarball',type=str,
+            help = "Download the tarball of the given repo")
+    g.add_argument('-dz','--zipball',type=str,
+            help = "Download the zipball of the given repo")
     
 
     if len(sys.argv)==1:
@@ -156,6 +159,89 @@ def main():
             print('-'*150)
             return
 
+#TARBALL
+
+    if(args.tarball):
+        name=args.tarball
+        n=name.find("github.com")
+        if(n>=0):
+            if(n!=0):
+                n1=name.find("www.github.com")
+                n2=name.find("http://github.com")
+                n3=name.find("https://github.com")
+                if(n1*n2*n3!=0):
+                    print('-'*150)
+                    print("Enter a valid URL. For help, type 'cli-github -h'")
+                    print('-'*150)
+                    return
+            name=args.tarball[n+11:]
+            if name.endswith('/'):
+                    name = name[:-1]
+            url = GITHUB_API + 'repos/' +name + '/tarball/master'
+
+        else:
+            print('-'*150)
+            print("Enter a valid URL. For help, type 'cli-github -h'")
+            print('-'*150)
+            return
+
+#ZIPBALL
+
+    if(args.zipball):
+        name=args.zipball
+        n=name.find("github.com")
+        if(n>=0):
+            if(n!=0):
+                n1=name.find("www.github.com")
+                n2=name.find("http://github.com")
+                n3=name.find("https://github.com")
+                if(n1*n2*n3!=0):
+                    print('-'*150)
+                    print("Enter a valid URL. For help, type 'cli-github -h'")
+                    print('-'*150)
+                    return
+            name=args.zipball[n+11:]
+            if name.endswith('/'):
+                    name = name[:-1]
+            url = GITHUB_API + 'repos/' +name + '/zipball/master'
+
+        else:
+            print('-'*150)
+            print("Enter a valid URL. For help, type 'cli-github -h'")
+            print('-'*150)
+            return
+
+
+#GET RESPONSES
+
+
+#TARBALL/ZIPBALL
+
+    if(args.tarball or args.zipball):
+
+        request = urllib.request.Request(url)
+        request.add_header('Authorization', 'token %s' % API_TOKEN)
+        try:
+            response_url = urllib.request.urlopen(request).geturl()
+        except urllib.error.HTTPError as err:
+            print('-'*150)
+            print("Invalid Credentials. For help, type 'clipy-github -h'")
+            print('-'*150)
+            return
+        
+        n=name.find('/')
+        name=name[n+1:]
+        if(args.tarball):
+            name=name+'.tar.gz'
+        if(args.zipball):
+            name=name+'.zip'
+        print("\nDownloading "+ name + '...\n')
+        urllib.request.urlretrieve(response_url , name)
+        print(name + ' has been saved\n')
+        return
+
+#OTHER OPTIONS
+
     request = urllib.request.Request(url)
     request.add_header('Authorization', 'token %s' % API_TOKEN)
     try:
@@ -167,12 +253,17 @@ def main():
         return
         
     jsondata = json.loads(response)
+
+# USERNAME and URL
+
     if(args.url or args.username):
         x = PrettyTable([" Repository ", "★ Star"])
         x.align[u" Repository "] = u"l"
         for i in jsondata:
             x.add_row([i['name'],i['stargazers_count']])
         print(x)
+
+#RECURSIVE TREE
 
     if(args.recursive):
         x = PrettyTable([" File/Folder ", " Size (Bytes) "])
@@ -186,8 +277,13 @@ def main():
             x.add_row([path,size])
         print(x)
             
+
+#README
+
     if(args.readme):
         print(base64.b64decode(jsondata['content']).decode('utf-8'));
+
+#RELEASES
 
     if(args.releases):
         x = PrettyTable([" Release name "," Release Date "," Release Time "])
@@ -202,5 +298,3 @@ def main():
             x.add_row([i['tag_name'],date,time])
         print(x)
 
-if __name__ == '__main__':
-    main()

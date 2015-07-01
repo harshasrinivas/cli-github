@@ -12,12 +12,13 @@ Click `here <http://showterm.io/38d628a202209e1136afd#fast>`__ to see it live in
 |  |Build Status|  | |Version| |  |Downloads| |
 +------------------+-----------+--------------+
 
-Version 1.0.5
+Version 1.0.6
 -------------
 - Fixed URL parsing bugs
 - Left Indented repo names
 - Fixed Python 2/3 compatibility issues
 - Option to list releases of a user's repo
+- Option to download tarball/zipball from repo link
 
 Live Demo
 =========
@@ -31,6 +32,11 @@ Live Demo
 `DEMO <http://showterm.io/820b37fab14c7ed4cf7ff#fast>`__ : To get the RAW version of the readme file of a repository from the repository URL
 
 `DEMO <http://showterm.io/24a6ceec356bb672ec24f#fast>`__ : To get the list of releases from the user's repository URL
+
+`DEMO <http://showterm.io/bb2245e764781b11b1b78#fast>`__ : Download the tarball from the user's repository URL
+
+`DEMO <http://showterm.io/910e8e424f28cfe3b4a22#fast>`__ : Download the zipball from the user's repository URL
+
 
 Installation
 ============
@@ -120,6 +126,10 @@ Options
                         Get the raw version of the repository readme file from repo link URL
     -re RELEASES, --releases RELEASES
                         Get the list of releases from repo link
+    -dt TARBALL, --tarball TARBALL
+                        Download the tarball from repo link
+    -dz ZIPBALL, --zipball ZIPBALL
+                        Download the zipball from repo link
 
 Usage
 =====
@@ -155,6 +165,19 @@ Get the list of releases from the user's repository URL
 .. code:: sh
 
    $ cli-github -R https://github.com/harshasrinivas/cli-github
+
+Download the tarball of the any repo
+
+.. code:: sh
+
+   $ cli-github -dt https://github.com/harshasrinivas/URL-screenshot
+
+Download the zipball of the any repo
+ 
+.. code:: sh
+   
+   $ cli-github -dz https://github.com/harshasrinivas/URL-screenshot
+
 
 Contribute
 ==========
