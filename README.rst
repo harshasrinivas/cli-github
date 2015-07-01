@@ -162,6 +162,12 @@ Contribute
 If you want to add features, improve them, or report issues, feel free
 to send a pull request.
 
+Contributors
+============
+
+- `harshasrinivas <https://github.com/harshasrinivas>`__ 
+- `sananth12 <https://github.com/sananth12>`__
+
 .. |Build Status| image:: https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master
       :target: https://travis-ci.org/harshasrinivas/cli-github
 
