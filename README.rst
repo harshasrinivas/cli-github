@@ -190,6 +190,7 @@ Contributors
 
 - `harshasrinivas <https://github.com/harshasrinivas>`__ 
 - `sananth12 <https://github.com/sananth12>`__
+- `SanketDG <https://github.com/SanketDG>`__
 
 .. |Build Status| image:: https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master
       :target: https://travis-ci.org/harshasrinivas/cli-github
