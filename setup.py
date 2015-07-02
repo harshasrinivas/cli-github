@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(name='cli-github',
       description='Github inside the Command Line',
-      version='1.0.6',
+      version='1.0.7',
       license='GPL v3.0',
       author='Harsha Srinivas',
       author_email='95harsha95@gmail.com',

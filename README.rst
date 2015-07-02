@@ -12,13 +12,11 @@ Click `here <http://showterm.io/38d628a202209e1136afd#fast>`__ to see it live in
 |  |Build Status|  | |Version| |  |Downloads| |
 +------------------+-----------+--------------+
 
-Version 1.0.6
+Version 1.0.7
 -------------
-- Fixed URL parsing bugs
-- Left Indented repo names
-- Fixed Python 2/3 compatibility issues
 - Option to list releases of a user's repo
 - Option to download tarball/zipball from repo link
+- Conformed to pep8 guidelines
 
 Live Demo
 =========

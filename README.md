@@ -10,12 +10,10 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 | [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
 
 
-##Version 1.0.6
-* Fixed URL parsing bugs
-* Left Indented repo names
-* Fixed Python 2/3 compatibility issues
+##Version 1.0.7
 * Option to list releases of a user's repo
 * Option to download tarball/zipball from repo link
+* Conformed to pep8 guidelines
 
 #Screenshots
 
