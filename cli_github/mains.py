@@ -2,6 +2,8 @@
 
 from __future__ import print_function
 from __future__ import absolute_import
+from future.standard_library import install_aliases
+install_aliases()
 import os
 import sys
 import argparse
@@ -9,11 +11,7 @@ import json
 import urllib.request
 import base64
 import dateutil.parser
-from future.standard_library import install_aliases
 from prettytable import PrettyTable
-from string import *
-
-install_aliases()
 
 GITHUB_API = 'https://api.github.com/'
 
