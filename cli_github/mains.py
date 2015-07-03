@@ -19,8 +19,8 @@ API_TOKEN = os.environ.get('GITHUB_TOKEN')
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Github within the \
-                                                  Command Line')
+    parser = argparse.ArgumentParser(
+            description='Github within the Command Line')
     g = parser.add_mutually_exclusive_group()
     g.add_argument('-n', '--username', type=str,
                    help="Get repos of the given username")
@@ -262,7 +262,7 @@ def main():
 
     if(args.url or args.username):
         x = PrettyTable([" Repository ", "★ Star"])
-        x.align[u" Repository "] = u"l"
+        x.align[" Repository "] = "l"
         for i in jsondata:
             x.add_row([i['name'], i['stargazers_count']])
         print(x)
@@ -271,7 +271,7 @@ def main():
 
     if(args.recursive):
         x = PrettyTable([" File/Folder ", " Size (Bytes) "])
-        x.align[u" File/Folder "] = u"l"
+        x.align[" File/Folder "] = "l"
         for i in jsondata['tree']:
             size = '-'
             path = i['path']+'/'
