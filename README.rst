@@ -12,10 +12,9 @@ Click `here <http://showterm.io/38d628a202209e1136afd#fast>`__ to see it live in
 |  |Build Status|  | |Version| |  |Downloads| |
 +------------------+-----------+--------------+
 
-Version 1.0.7
+Version 1.0.8
 -------------
-- Option to list releases of a user's repo
-- Option to download tarball/zipball from repo link
+- Option to show the contents of a file/folder
 - Conformed to pep8 guidelines
 
 Live Demo
@@ -35,6 +34,7 @@ Live Demo
 
 `DEMO <http://showterm.io/910e8e424f28cfe3b4a22#fast>`__ : Download the zipball from the user's repository URL
 
+`DEMO <http://showterm.io/4dcfaca8c50f912e3c609#fast>`__ : To show the contents of a file/folder
 
 Installation
 ============
@@ -128,6 +128,8 @@ Options
                         Download the tarball from repo link
     -dz ZIPBALL, --zipball ZIPBALL
                         Download the zipball from repo link
+    -op OPENFILE, --openfile OPENFILE
+                        Show the contents of the given file in a repo
 
 Usage
 =====
@@ -176,6 +178,11 @@ Download the zipball of the any repo
    
    $ cli-github -dz https://github.com/harshasrinivas/URL-screenshot
 
+Show the contents of a file/folder
+ 
+.. code:: sh
+   
+   $ cli-github -op https://github.com/harshasrinivas/cli-github/setup.py
 
 Contribute
 ==========

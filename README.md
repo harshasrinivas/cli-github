@@ -10,9 +10,8 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
 | [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
 
 
-##Version 1.0.7
-* Option to list releases of a user's repo
-* Option to download tarball/zipball from repo link
+##Version 1.0.8
+* List the contents of a given file/folder
 * Conformed to pep8 guidelines
 
 #Screenshots
@@ -97,6 +96,8 @@ Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live i
                     Download the tarball from repo link
 -dz ZIPBALL, --zipball ZIPBALL
 					Download the zipball from repo link
+-op OPENFILE, --openfile OPENFILE
+                    Show the contents of the given file in a repo
 ```
 
 
@@ -109,28 +110,31 @@ Display the list of a user's repositories from the username, along with the numb
 
 Display the list of a user's repositories from the profile URL, along with the number of stargazers
 
-`$ cli-github -u https://github.com/harshasrinivas`
+`$ cli-github -u github.com/harshasrinivas`
 
 Display all the files and folders within a repository recursively from the repository URL, along with their sizes
 
-`$ cli-github -r https://github.com/harshasrinivas/cli-github`
+`$ cli-github -r github.com/harshasrinivas/cli-github`
 
 Get the RAW version of the readme file of a repository from the repository URL
 
-`$ cli-github -R https://github.com/harshasrinivas/cli-github`
+`$ cli-github -R github.com/harshasrinivas/cli-github`
 
 Get the list of releases from the user's repo link
 
-`$ cli-github -re https://github.com/sananth12/ImageScraper`
+`$ cli-github -re github.com/sananth12/ImageScraper`
 
 Download the tarball of the any repo
 
-`$ cli-github -dt https://github.com/harshasrinivas/URL-screenshot`
+`$ cli-github -dt github.com/harshasrinivas/URL-screenshot`
 
 Download the zipball of the any repo
 
-`$ cli-github -dz https://github.com/harshasrinivas/URL-screenshot`
+`$ cli-github -dz github.com/harshasrinivas/URL-screenshot`
 
+List the contents of the given folder
+
+`$ cli-github -op github.com/harshasrinivas/cli-github/setup.py`
 
 #Live Demo
 
@@ -148,6 +152,7 @@ Download the zipball of the any repo
 
 [**DEMO**](http://showterm.io/910e8e424f28cfe3b4a22#fast) : Download the zipball from the user's repository URL
 
+[**DEMO**](http://showterm.io/4dcfaca8c50f912e3c609#fast) : Show the contents of a given file/folder
 
 #Contribute
 

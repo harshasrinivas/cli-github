@@ -42,6 +42,8 @@ def main():
                        help="Download the tarball of the given repo")
     group.add_argument('-dz', '--zipball', type=str,
                        help="Download the zipball of the given repo")
+    group.add_argument('-op', '--openfile', type=str,
+                       help="Show the contents of the given file in a repo")
 
     if len(sys.argv) == 1:
         parser.print_help()
@@ -92,6 +94,18 @@ def main():
             key = '/zipball/'
             name = url_parse(args.zipball)
         url = GITHUB_API + 'repos/' + name + key + 'master'
+
+# OPEN ONE FILE
+
+    if args.openfile:
+        name = url_parse(args.openfile)
+        position = name.find('/')
+        user = name[:position+1]
+        rest = name[position+1:]
+        position = rest.find('/')
+        repo = rest[:position+1]
+        rest = rest[position+1:]
+        url = GITHUB_API + 'repos/' + user + repo + 'contents/' + rest
 
 # GET RESPONSES
 
@@ -153,3 +167,17 @@ def main():
             time = date[11:][:5] + ' UTC'
             table.add_row([i['tag_name'], date, time])
         print(table)
+
+# OPEN ONE FILE
+
+    if args.openfile:
+        try:
+            print(base64.b64decode(jsondata['content']).decode('utf-8'))
+            return
+        except:
+            print("\nDirectory URL was given, hence its contents will be displayed\n")
+            table = PrettyTable(["Folder Contents"])
+            for i in jsondata:
+                table.add_row([i['name']])
+            print(table)
+
