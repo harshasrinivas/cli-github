@@ -2,47 +2,17 @@
 
 **A Command-Line Python Application to display Github from the CLI !**
 
-Click [**here**](http://showterm.io/38d628a202209e1136afd#fast) to see it live in action!
------------------------------------------------------------------------------------------
+
 
 | Build Status |  Version |  Downloads  |
 | ------------ | -------- |  ---------  |
 | [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
 
+![gif](https://github.com/harshasrinivas/cli-github/images/my.gif)
 
 ##Version 1.0.8
 * List the contents of a given file/folder
 * Conformed to pep8 guidelines
-
-#Screenshots
-
-`To fetch repos and stars using the username`
-
-![Username](https://github.com/harshasrinivas/cli-github/blob/master/images/name.png)
-
-`To fetch repos and stars using the profile URL`
-
-![URL](https://github.com/harshasrinivas/cli-github/blob/master/images/url.png)
-
-`To get all the files and folders within a repo from its link`
-
-![Tree](https://github.com/harshasrinivas/cli-github/blob/master/images/tree.png)
-
-`To get the RAW version of readme file from the repo link`
-
-![Readme](https://github.com/harshasrinivas/cli-github/blob/master/images/readme.png)
-
-`To get the list of releases of a user's repository`
-
-![Releases](https://github.com/harshasrinivas/cli-github/blob/master/images/releases.png)
-
-`Download the tarball of a user's repository`
-
-![Tarball](https://github.com/harshasrinivas/cli-github/blob/master/images/dt.png)
-
-`Download the zipball of a user's repository`
-
-![Zipball](https://github.com/harshasrinivas/cli-github/blob/master/images/dz.png)
 
 
 #Installation
