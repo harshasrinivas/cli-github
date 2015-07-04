@@ -1,3 +1,5 @@
+"""main installation setup file"""
+
 from setuptools import setup
 
 setup(name='cli-github',
@@ -31,5 +33,4 @@ setup(name='cli-github',
           'Topic :: Software Development :: Libraries :: Python Modules',
           'Topic :: Software Development :: User Interfaces',
           'Topic :: Software Development :: Version Control',
-      ],
-      )
+      ],)
