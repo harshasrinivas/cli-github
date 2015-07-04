@@ -10,7 +10,7 @@
 
 ![gif](https://github.com/harshasrinivas/cli-github/blob/master/images/my.gif)
 
-##Version 1.0.8
+##Version 1.0.9
 * List the contents of a given file/folder
 * Conformed to pep8 guidelines
 

@@ -12,7 +12,7 @@ Click `here <https://github.com/harshasrinivas/cli-github/blob/master/images/my.
 |  |Build Status|  | |Version| |  |Downloads| |
 +------------------+-----------+--------------+
 
-Version 1.0.8
+Version 1.0.9
 -------------
 - Option to show the contents of a file/folder
 - Conformed to pep8 guidelines
