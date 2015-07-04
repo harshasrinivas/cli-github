@@ -144,45 +144,45 @@ Display the list of a user's repositories from the profile URL
 
 .. code:: sh
 
-   $ cli-github -u https://github.com/harshasrinivas
+   $ cli-github -u github.com/harshasrinivas
 
 Display all the files and folders within a repository recursively from
 the repository URL
 
 .. code:: sh
 
-   $ cli-github -r https://github.com/harshasrinivas/cli-github
+   $ cli-github -r harshasrinivas/cli-github
 
 Get the RAW version of the readme file of a repository from the
 repository URL
 
 .. code:: sh
 
-   $ cli-github -R https://github.com/harshasrinivas/cli-github
+   $ cli-github -R harshasrinivas/cli-github
 
 Get the list of releases from the user's repository URL
 
 .. code:: sh
 
-   $ cli-github -R https://github.com/harshasrinivas/cli-github
+   $ cli-github -R harshasrinivas/cli-github
 
 Download the tarball of the any repo
 
 .. code:: sh
 
-   $ cli-github -dt https://github.com/harshasrinivas/URL-screenshot
+   $ cli-github -dt harshasrinivas/cli-github
 
 Download the zipball of the any repo
  
 .. code:: sh
    
-   $ cli-github -dz https://github.com/harshasrinivas/URL-screenshot
+   $ cli-github -dz harshasrinivas/cli-github
 
 Show the contents of a file/folder
  
 .. code:: sh
    
-   $ cli-github -op https://github.com/harshasrinivas/cli-github/setup.py
+   $ cli-github -op harshasrinivas/cli-github/setup.py
 
 Contribute
 ==========

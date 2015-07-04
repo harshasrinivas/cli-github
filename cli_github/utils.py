@@ -43,8 +43,9 @@ def url_parse(name):
             name = name[:-1]
         return name
     else:
-        exception()
-        sys.exit(0)
+        if name.endswith('/'):
+            name = name[:-1]
+        return name
 
 # GET TO OBTAIN JSON
 

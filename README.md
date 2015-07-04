@@ -114,27 +114,27 @@ Display the list of a user's repositories from the profile URL, along with the n
 
 Display all the files and folders within a repository recursively from the repository URL, along with their sizes
 
-`$ cli-github -r github.com/harshasrinivas/cli-github`
+`$ cli-github -r harshasrinivas/cli-github`
 
 Get the RAW version of the readme file of a repository from the repository URL
 
-`$ cli-github -R github.com/harshasrinivas/cli-github`
+`$ cli-github -R harshasrinivas/cli-github`
 
 Get the list of releases from the user's repo link
 
-`$ cli-github -re github.com/sananth12/ImageScraper`
+`$ cli-github -re harshasrinivas/cli-github`
 
 Download the tarball of the any repo
 
-`$ cli-github -dt github.com/harshasrinivas/URL-screenshot`
+`$ cli-github -dt harshasrinivas/cli-github`
 
 Download the zipball of the any repo
 
-`$ cli-github -dz github.com/harshasrinivas/URL-screenshot`
+`$ cli-github -dz harshasrinivas/cli-github`
 
 List the contents of the given folder
 
-`$ cli-github -op github.com/harshasrinivas/cli-github/setup.py`
+`$ cli-github -op harshasrinivas/cli-github/setup.py`
 
 #Live Demo
 
