@@ -17,6 +17,7 @@ GITHUB_API = 'https://api.github.com/'
 
 API_TOKEN = os.environ.get('GITHUB_TOKEN')
 
+# MAIN
 
 def main():
     parser = argparse.ArgumentParser(
@@ -40,33 +41,13 @@ def main():
     if len(sys.argv) == 1:
         parser.print_help()
         return
-
     args = parser.parse_args()
 
 # URL
 
     if(args.url):
-        name = args.url
-        n = name.find("github.com")
-        if(n >= 0):
-            if(n != 0):
-                n1 = name.find("www.github.com")
-                n2 = name.find("http://github.com")
-                n3 = name.find("https://github.com")
-                if(n1*n2*n3 != 0):
-                    print('-'*150)
-                    print("Enter a valid URL. For help, type 'cli-github -h'")
-                    print('-'*150)
-                    return
-            name = args.url[n+11:]
-            if name.endswith('/'):
-                name = name[:-1]
-            url = GITHUB_API + 'users/' + name + '/repos'
-        else:
-            print('-'*150)
-            print("Enter a valid URL. For help, type 'cli-github -h'")
-            print('-'*150)
-            return
+        name = url_parse(args.url)
+        url = GITHUB_API + 'users/' + name + '/repos'
 
 # USERNAME
 
@@ -77,37 +58,9 @@ def main():
 # TREE
 
     if(args.recursive):
-        name = args.recursive
-        n = name.find("github.com")
-        if(n >= 0):
-            if(n != 0):
-                n1 = name.find("www.github.com")
-                n2 = name.find("http://github.com")
-                n3 = name.find("https://github.com")
-                if(n1*n2*n3 != 0):
-                    print('-'*150)
-                    print("Enter a valid URL. For help, type 'cli-github -h'")
-                    print('-'*150)
-                    return
-            name = args.recursive[n+11:]
-            if name.endswith('/'):
-                    name = name[:-1]
-            url = GITHUB_API + 'repos/' + name + '/branches/master'
-            request = urllib.request.Request(url)
-            request.add_header('Authorization', 'token %s' % API_TOKEN)
-            try:
-                response = urllib.request.urlopen(request).read().decode('utf-8')
-            except urllib.error.HTTPError:
-                print('-'*150)
-                print("Invalid Credentials. For help, type 'cli-github -h'")
-                print('-'*150)
-                return
-        else:
-            print('-'*150)
-            print("Enter a valid URL. For help, type 'cli-github -h'")
-            print('-'*150)
-            return
-
+        name = url_parse(args.recursive)
+        url = GITHUB_API + 'repos/' + name + '/branches/master'
+        response = get_req(url)
         jsondata = json.loads(response)
         sha = jsondata['commit']['commit']['tree']['sha']
         url = GITHUB_API + 'repos/' + name + '/git/trees/' + sha + '?recursive=1'
@@ -115,124 +68,31 @@ def main():
 # README
 
     if(args.readme):
-        name = args.readme
-        n = name.find("github.com")
-        if(n >= 0):
-            if(n != 0):
-                n1 = name.find("www.github.com")
-                n2 = name.find("http://github.com")
-                n3 = name.find("https://github.com")
-                if(n1*n2*n3 != 0):
-                    print('-'*150)
-                    print("Enter a valid URL. For help, type 'cli-github -h'")
-                    print('-'*150)
-                    return
-
-            name = args.readme[n+11:]
-            if name.endswith('/'):
-                    name = name[:-1]
-            url = GITHUB_API + 'repos/' + name + '/readme'
-        else:
-            print('-'*150)
-            print("Enter a valid URL. For help, type 'cli-github -h'")
-            print('-'*150)
-            return
+        name = url_parse(args.readme)
+        url = GITHUB_API + 'repos/' + name + '/readme'
 
 # RELEASES
 
     if(args.releases):
-        name = args.releases
-        n = name.find("github.com")
-        if(n >= 0):
-            if(n != 0):
-                n1 = name.find("www.github.com")
-                n2 = name.find("http://github.com")
-                n3 = name.find("https://github.com")
-                if(n1*n2*n3 != 0):
-                    print('-'*150)
-                    print("Enter a valid URL. For help, type 'cli-github -h'")
-                    print('-'*150)
-                    return
-            name = args.releases[n+11:]
-            if name.endswith('/'):
-                    name = name[:-1]
-            url = GITHUB_API + 'repos/' + name + '/releases'
-        else:
-            print('-'*150)
-            print("Enter a valid URL. For help, type 'cli-github -h'")
-            print('-'*150)
-            return
+        name = url_parse(args.releases)
+        url = GITHUB_API + 'repos/' + name + '/releases'
 
-# TARBALL
+# TARBALL/ZIPBALL
 
     if(args.tarball):
-        name = args.tarball
-        n = name.find("github.com")
-        if(n >= 0):
-            if(n != 0):
-                n1 = name.find("www.github.com")
-                n2 = name.find("http://github.com")
-                n3 = name.find("https://github.com")
-                if(n1*n2*n3 != 0):
-                    print('-'*150)
-                    print("Enter a valid URL. For help, type 'cli-github -h'")
-                    print('-'*150)
-                    return
-            name = args.tarball[n+11:]
-            if name.endswith('/'):
-                    name = name[:-1]
-            url = GITHUB_API + 'repos/' + name + '/tarball/master'
-
-        else:
-            print('-'*150)
-            print("Enter a valid URL. For help, type 'cli-github -h'")
-            print('-'*150)
-            return
-
-# ZIPBALL
-
+        key = '/tarball/'
+        name = url_parse(args.tarball)
     if(args.zipball):
-        name = args.zipball
-        n = name.find("github.com")
-        if(n >= 0):
-            if(n != 0):
-                n1 = name.find("www.github.com")
-                n2 = name.find("http://github.com")
-                n3 = name.find("https://github.com")
-                if(n1*n2*n3 != 0):
-                    print('-'*150)
-                    print("Enter a valid URL. For help, type 'cli-github -h'")
-                    print('-'*150)
-                    return
-            name = args.zipball[n+11:]
-            if name.endswith('/'):
-                    name = name[:-1]
-            url = GITHUB_API + 'repos/' + name + '/zipball/master'
-
-        else:
-            print('-'*150)
-            print("Enter a valid URL. For help, type 'cli-github -h'")
-            print('-'*150)
-            return
-
+        key = '/zipball/'
+        name = url_parse(args.zipball)
+    url = GITHUB_API + 'repos/' + name + key + 'master'
 
 # GET RESPONSES
-
 
 # TARBALL/ZIPBALL
 
     if(args.tarball or args.zipball):
-
-        request = urllib.request.Request(url)
-        request.add_header('Authorization', 'token %s' % API_TOKEN)
-        try:
-            response_url = urllib.request.urlopen(request).geturl()
-        except urllib.error.HTTPError:
-            print('-'*150)
-            print("Invalid Credentials. For help, type 'cli-github -h'")
-            print('-'*150)
-            return
-
+        response_url = geturl_req(url)
         n = name.find('/')
         name = name[n+1:]
         if(args.tarball):
@@ -246,16 +106,7 @@ def main():
 
 # OTHER OPTIONS
 
-    request = urllib.request.Request(url)
-    request.add_header('Authorization', 'token %s' % API_TOKEN)
-    try:
-        response = urllib.request.urlopen(request).read().decode('utf-8')
-    except urllib.error.HTTPError:
-        print('-'*150)
-        print("Invalid Credentials. For help, type 'cli-github -h'")
-        print('-'*150)
-        return
-
+    response = get_req(url)
     jsondata = json.loads(response)
 
 # USERNAME and URL
@@ -281,7 +132,6 @@ def main():
             x.add_row([path, size])
         print(x)
 
-
 # README
 
     if(args.readme):
@@ -291,13 +141,62 @@ def main():
 
     if(args.releases):
         x = PrettyTable([" Release name ", " Release Date ", " Release Time "])
-
         for i in jsondata:
-            ti = dateutil.parser.parse(i['published_at'])
-            ti = str(ti)
+            ti = str(dateutil.parser.parse(i['published_at']))
             date = ti[:10]
-            time = ti[11:]
-            time = time[:5]
-            time = time + ' UTC'
+            time = date[11:][:5] + ' UTC'
             x.add_row([i['tag_name'], date, time])
         print(x)
+
+# UTILITY FUNCTIONS
+
+# EXCEPTION
+
+def exception():
+	print("Enter a valid URL. For help, type 'cli-github -h'")
+        sys.exit(0)
+
+
+# URL PARSING
+
+def url_parse(name):
+	n = name.find("github.com")
+        if(n >= 0):
+            if(n != 0):
+                n1 = name.find("www.github.com")
+                n2 = name.find("http://github.com")
+                n3 = name.find("https://github.com")
+                if(n1*n2*n3 != 0):
+                    exception()
+                    sys.exit(0)
+            name = name[n+11:]
+            if name.endswith('/'):
+                name = name[:-1]
+            return name
+        else:
+            exception()
+            sys.exit(0)
+
+# GET TO OBTAIN JSON
+
+def get_req(url):
+    request = urllib.request.Request(url)
+    request.add_header('Authorization', 'token %s' % API_TOKEN)
+    try:
+        response = urllib.request.urlopen(request).read().decode('utf-8')
+        return response
+    except urllib.error.HTTPError:
+        exception()
+        sys.exit(0)
+
+# RETURNS 302
+
+def geturl_req(url):
+    request = urllib.request.Request(url)
+    request.add_header('Authorization', 'token %s' % API_TOKEN)
+    try:
+        response_url = urllib.request.urlopen(request).geturl()
+        return response_url
+    except urllib.error.HTTPError:
+        exception()
+        sys.exit(0)
