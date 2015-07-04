@@ -13,7 +13,7 @@
 ##Version 1.0.9
 * List the contents of a given file/folder
 * Conformed to pep8 guidelines
-
+* URL input parsing made better
 
 #Installation
 
