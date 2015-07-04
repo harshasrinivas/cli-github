@@ -8,7 +8,7 @@
 | ------------ | -------- |  ---------  |
 | [![Build Status](https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master)](https://travis-ci.org/harshasrinivas/cli-github) | [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
 
-![gif](https://github.com/harshasrinivas/cli-github/images/my.gif)
+![gif](https://github.com/harshasrinivas/cli-github/blob/master/images/my.gif)
 
 ##Version 1.0.8
 * List the contents of a given file/folder

@@ -3,7 +3,7 @@ cli-github
 
 **A Python App to display Github from the command-line!**
 
-Click `here <https://github.com/harshasrinivas/cli-github/images/my.gif>`__ to see it live in action!
+Click `here <https://github.com/harshasrinivas/cli-github/blob/master/images/my.gif>`__ to see it live in action!
 -----------------------------------------------------------------------------------------
 
 +------------------+-----------+--------------+
