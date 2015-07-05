@@ -6,11 +6,11 @@ cli-github
 Click `here <https://github.com/harshasrinivas/cli-github/blob/master/images/my.gif>`__ to see it live in action!
 -----------------------------------------------------------------------------------------
 
-+------------------+-----------+--------------+
-|   Build Status   |  Version  |   Downloads  |
-+==================+===========+==============+
-|  |Build Status|  | |Version| |  |Downloads| |
-+------------------+-----------+--------------+
++-----------+--------------+
+|  Version  |   Downloads  |
++===========+==============+
+| |Version| |  |Downloads| |
++-----------+--------------+
 
 Version 1.0.9
 -------------
