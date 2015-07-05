@@ -164,7 +164,9 @@ def main():
         for i in jsondata:
             time = str(dateutil.parser.parse(i['published_at']))
             date = time[:10]
-            time = date[11:][:5] + ' UTC'
+            time = time[11:]
+            time = time[:5]
+            time = time + ' UTC'
             table.add_row([i['tag_name'], date, time])
         print(table)
 
