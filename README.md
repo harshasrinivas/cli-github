@@ -52,10 +52,8 @@
 
 ```sh
 -h, --help          show this help message and exit
--n USERNAME, --username USERNAME
-                    Get the list of repositories of the given username
--u URL, --url URL 
-                    Get repos from the user profile URL
+-n URL, --url URL   
+					Get repos from the user profile's URL/USERNAME
 -r RECURSIVE, --recursive RECURSIVE
                     Get the file structure from the repo link URL
 -R README, --readme README
@@ -74,13 +72,9 @@
 
 #Usage
 
-Display the list of a user's repositories from the username, along with the number of stargazers
+Display the list of a user's repositories from the username/URL, along with the number of stargazers
 
 `$ cli-github -n harshasrinivas`
-
-Display the list of a user's repositories from the profile URL, along with the number of stargazers
-
-`$ cli-github -u github.com/harshasrinivas`
 
 Display all the files and folders within a repository recursively from the repository URL, along with their sizes
 
@@ -108,9 +102,7 @@ List the contents of the given folder
 
 #Live Demo
 
-[**DEMO**](http://showterm.io/aaa79dee63aad0695e304#fast) : Display the list of a user's repositories from the username, along with the number of stargazers
-
-[**DEMO**](http://showterm.io/5dc39b7fc3d7244577d2f#fast) : Display the list of a user's repositories from the profile URL, along with the number of stargazers
+[**DEMO**](http://showterm.io/aaa79dee63aad0695e304#fast) : Display the list of a user's repositories from the username/URL, along with the number of stargazers
 
 [**DEMO**](http://showterm.io/99e16e6ae35727999eb23#fast) : Display all the folders and files within a repository recursively from the repository URL, along with their sizes
 

@@ -28,9 +28,7 @@ def main():
     parser = argparse.ArgumentParser(
         description='Github within the Command Line')
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('-n', '--username', type=str,
-                       help="Get repos of the given username")
-    group.add_argument('-u', '--url', type=str,
+    group.add_argument('-n', '--url', type=str,
                        help="Get repos from the user profile's URL")
     group.add_argument('-r', '--recursive', type=str,
                        help="Get the file structure from the repo link")
@@ -54,12 +52,6 @@ def main():
 
     if args.url:
         name = url_parse(args.url)
-        url = GITHUB_API + 'users/' + name + '/repos'
-
-# USERNAME
-
-    if args.username:
-        name = args.username
         url = GITHUB_API + 'users/' + name + '/repos'
 
 # TREE
