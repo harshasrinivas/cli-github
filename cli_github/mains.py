@@ -123,7 +123,7 @@ def main():
 
 # USERNAME and URL
 
-    if args.url or args.username:
+    if args.url:
         table = PrettyTable([" Repository ", "★ Star"])
         table.align[" Repository "] = "l"
         for i in jsondata:
