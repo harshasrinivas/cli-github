@@ -42,6 +42,8 @@ def main():
                        help="Download the zipball of the given repo")
     group.add_argument('-op', '--openfile', type=str,
                        help="Show the contents of the given file in a repo")
+    group.add_argument('-f','--followers',type=str,
+                       help="Get followers of the user")
 
     if len(sys.argv) == 1:
         parser.print_help()
@@ -115,7 +117,13 @@ def main():
         urllib.request.urlretrieve(response_url, name)
         print(name + ' has been saved\n')
         return
+    
+# FOLLOWERS
 
+    if args.followers:
+        name = url_parse(args.followers)
+        url = GITHUB_API + 'users/' + name + '/followers'
+        
 # OTHER OPTIONS
 
     response = get_req(url)
@@ -175,3 +183,11 @@ def main():
                 table.add_row([i['name']])
             print(table)
 
+# GET FOLLOWERS
+    if args.followers:
+        table = PrettyTable([" FOLLOWERS "])
+        table.align[" FOLLOWERS "] = "l"
+        for i in jsondata:
+            table.add_row([i['login']])
+        print("Number of followers:"+str(len(jsondata)))
+        print(table)
