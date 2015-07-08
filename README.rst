@@ -17,6 +17,7 @@ Version 1.0.9
 - Option to show the contents of a file/folder
 - Conformed to pep8 guidelines
 - URL input parsing made better
+- List the user followers
 
 Live Demo
 =========
@@ -34,6 +35,8 @@ Live Demo
 `DEMO <http://showterm.io/910e8e424f28cfe3b4a22#fast>`__ : Download the zipball from the user's repository URL
 
 `DEMO <http://showterm.io/4dcfaca8c50f912e3c609#fast>`__ : To show the contents of a file/folder
+
+`DEMO <http://showterm.io/9bfd25a48074fb2ca8211#fast>`__ : List the followers of the user
 
 Installation
 ============
@@ -114,7 +117,7 @@ Options
 
     -h, --help            show this help message and exit
     -n URL, --url URL
-                        Get repos from the user profile's URL
+                        Get repos from the user profile URL/username
     -r RECURSIVE, --recursive RECURSIVE
                         Get the file structure from the repo link URL
     -R README, --readme README
@@ -127,6 +130,8 @@ Options
                         Download the zipball from repo link
     -op OPENFILE, --openfile OPENFILE
                         Show the contents of the given file in a repo
+    -f FOLLOWERS, --followers FOLLOWERS
+                        Get followers of the user
 
 Usage
 =====
@@ -175,6 +180,13 @@ Show the contents of a file/folder
    
    $ cli-github -op harshasrinivas/cli-github/setup.py
 
+List the followers of a user
+ 
+.. code:: sh
+   
+   $ cli-github -f harshasrinivas
+
+
 Contribute
 ==========
 
@@ -187,6 +199,7 @@ Contributors
 - `harshasrinivas <https://github.com/harshasrinivas>`__ 
 - `sananth12 <https://github.com/sananth12>`__
 - `SanketDG <https://github.com/SanketDG>`__
+- `Pratik151 <https://github.com/Pratik151>`__
 
 .. |Build Status| image:: https://travis-ci.org/harshasrinivas/cli-github.svg?branch=master
       :target: https://travis-ci.org/harshasrinivas/cli-github

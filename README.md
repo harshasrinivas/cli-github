@@ -14,6 +14,7 @@
 * List the contents of a given file/folder
 * Conformed to pep8 guidelines
 * URL input parsing made better
+* List User followers
 
 #Installation
 
@@ -53,7 +54,7 @@
 ```sh
 -h, --help          show this help message and exit
 -n URL, --url URL   
-					Get repos from the user profile's URL/USERNAME
+					Get repos from the user profile URL/USERNAME
 -r RECURSIVE, --recursive RECURSIVE
                     Get the file structure from the repo link URL
 -R README, --readme README
@@ -66,6 +67,8 @@
 					Download the zipball from repo link
 -op OPENFILE, --openfile OPENFILE
                     Show the contents of the given file in a repo
+-f FOLLOWERS, --followers FOLLOWERS
+                    Get followers of the user
 ```
 
 
@@ -100,6 +103,10 @@ List the contents of the given folder
 
 `$ cli-github -op harshasrinivas/cli-github/setup.py`
 
+Get the list of followers of the user
+
+`$ cli-github -f harshasrinivas`
+
 #Live Demo
 
 [**DEMO**](http://showterm.io/aaa79dee63aad0695e304#fast) : Display the list of a user's repositories from the username/URL, along with the number of stargazers
@@ -116,6 +123,8 @@ List the contents of the given folder
 
 [**DEMO**](http://showterm.io/4dcfaca8c50f912e3c609#fast) : Show the contents of a given file/folder
 
+[**DEMO**](http://showterm.io/9bfd25a48074fb2ca8211#fast) : List the followers of a user
+
 #Contribute
 
 If you want to add features, improve them, or report issues, feel free to send a pull request.
@@ -125,7 +134,7 @@ If you want to add features, improve them, or report issues, feel free to send a
 * [harshasrinivas](https://github.com/harshasrinivas)
 * [sananth12](https://github.com/sananth12)
 * [SanketDG](https://github.com/SanketDG)
-
+* [Pratik151](https://github.com/Pratik151)
 
 #License
 
