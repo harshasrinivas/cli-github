@@ -4,3 +4,4 @@ build/
 cli_github.egg-info/
 dist/
 backup/
+file*
