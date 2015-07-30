@@ -5,3 +5,5 @@ cli_github.egg-info/
 dist/
 backup/
 file*
+build_deb/*.deb
+

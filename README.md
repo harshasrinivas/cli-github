@@ -27,6 +27,12 @@
 * Clone the repo `git clone https://github.com/harshasrinivas/cli-github.git`
 * Run `python setup.py install`
 
+
+## Building debian package
+
+* Clone the repo.
+* Execute `bash build_deb/build_deb.sh`
+
 ##Dependencies
 
 * prettytable `pip install prettytable`
