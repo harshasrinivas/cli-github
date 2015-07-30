@@ -1,0 +1,6 @@
+#!/bin/sh
+cd /tmp/cli-github
+sudo python setup.py install
+echo "Finished installing. \n"
+echo "Usage details:\n"
+cli-github -h

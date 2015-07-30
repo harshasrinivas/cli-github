@@ -1,0 +1,8 @@
+Package: cli-github
+Version: 1.0.9
+Section: utility
+Priority: optional
+Architecture: all
+Essential: no
+Maintainer: 95harsha95@gmail.com
+Description: Github within the CLI 
