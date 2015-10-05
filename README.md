@@ -1,20 +1,14 @@
 #`cli-github`
 
-**A Command-Line Python Application to display Github from the CLI !**
+**A Command-Line Python Application to display Github from the CLI !** ![License](http://img.shields.io/badge/License-GNU%20GPL%20v3-blue.svg)
 
 
 
 |  Version |  Downloads  |
 | -------- |  ---------  |
-| [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/pypi/dd/cli-github.svg)](https://pypi.python.org/pypi/cli-github)
+| [![PyPI version](https://badge.fury.io/py/cli_github.svg)](http://badge.fury.io/py/cli_github) | [![PyPi downloads](https://img.shields.io/badge/Downloads-5k%20total-brightgreen.svg)](https://pypi.python.org/pypi/cli-github)
 
 ![gif](https://github.com/harshasrinivas/cli-github/blob/master/images/my.gif)
-
-##Version 1.0.9
-* List the contents of a given file/folder
-* Conformed to pep8 guidelines
-* URL input parsing made better
-* List User followers
 
 #Installation
 
@@ -137,11 +131,5 @@ If you want to add features, improve them, or report issues, feel free to send a
 
 #Contributors
 
-* [harshasrinivas](https://github.com/harshasrinivas)
-* [sananth12](https://github.com/sananth12)
 * [SanketDG](https://github.com/SanketDG)
 * [Pratik151](https://github.com/Pratik151)
-
-#License
-
-![GPL V3](https://raw.githubusercontent.com/harshasrinivas/cli-github/master/images/gpl.png)
