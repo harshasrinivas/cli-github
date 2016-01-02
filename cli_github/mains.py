@@ -22,7 +22,6 @@ API_TOKEN = os.environ.get('GITHUB_TOKEN')
 
 # MAIN
 
-
 def main():
     """main function"""
     parser = argparse.ArgumentParser(
@@ -44,6 +43,10 @@ def main():
                        help="Show the contents of the given file in a repo")
     group.add_argument('-f','--followers',type=str,
                        help="Get followers of the user")
+    group.add_argument('-fo','--following',type=str,
+    				   help="Get people following the user")
+    group.add_argument('-c','--contributors',type=str,
+    				   help="Get contributors of a repo")
 
     if len(sys.argv) == 1:
         parser.print_help()
@@ -123,6 +126,18 @@ def main():
     if args.followers:
         name = url_parse(args.followers)
         url = GITHUB_API + 'users/' + name + '/followers'
+
+#FOLLOWING
+
+ 	if args.following :
+ 		name = url_parse(args.following)
+ 		url = GITHUB_API + 'users/' + name + '/following'
+
+#CONTRIBUTORS
+
+	if args.contributors :
+		name = url_parse(args.contributors)
+		url = GITHUB_API + 'repos/' + name + '/contributors'
         
 # OTHER OPTIONS
 
@@ -190,4 +205,22 @@ def main():
         for i in jsondata:
             table.add_row([i['login']])
         print("Number of followers:"+str(len(jsondata)))
+        print(table)
+
+# GET FOLLOWING
+    if args.following:
+        table = PrettyTable([" FOLLOWING "])
+        table.align[" FOLLOWING "] = "l"
+        for i in jsondata:
+            table.add_row([i['login']])
+        print("Number of following:"+str(len(jsondata)))
+        print(table)
+
+# GET CONTRIBUTORS
+    if args.contributors:
+        table = PrettyTable(["	CONTRIBUTORS "])
+        table.align[" CONTRIBUTORS "] = "l"
+        for i in jsondata:
+            table.add_row([i['login']])
+        print("Number of contributors:"+str(len(jsondata)))
         print(table)
