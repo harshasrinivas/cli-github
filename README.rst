@@ -132,6 +132,10 @@ Options
                         Show the contents of the given file in a repo
     -f FOLLOWERS, --followers FOLLOWERS
                         Get followers of the user
+    -fo FOLLOWING, --following FOLLOWING
+                        Get people following the user
+    -c CONTRIBUTORS, --contributors CONTRIBUTORS
+                        Get contributors of a repo
 
 Usage
 =====
@@ -185,6 +189,18 @@ List the followers of a user
 .. code:: sh
    
    $ cli-github -f harshasrinivas
+
+List people following the user
+
+.. code:: sh
+   
+   $ cli-github -fo harshasrinivas
+
+List contributors of a repo
+
+.. code:: sh
+   
+   $ cli-github -c harshasrinivas/cli-github
 
 
 Contribute

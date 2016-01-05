@@ -69,6 +69,10 @@
                     Show the contents of the given file in a repo
 -f FOLLOWERS, --followers FOLLOWERS
                     Get followers of the user
+-fo FOLLOWING, --following FOLLOWING
+                    Get people following the user
+-c CONTRIBUTORS, --contributors CONTRIBUTORS
+                   	Get contributors of a repo
 ```
 
 
@@ -106,6 +110,15 @@ List the contents of the given folder
 Get the list of followers of the user
 
 `$ cli-github -f harshasrinivas`
+
+Get the list of people following the user
+
+`$ cli-github -fo harshasrinivas`
+
+Get the contributors of a repo
+
+`$ cli-github -fo harshasrinivas/cli-github`
+
 
 #Live Demo
 
