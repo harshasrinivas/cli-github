@@ -41,12 +41,12 @@ def main():
                        help="Download the zipball of the given repo")
     group.add_argument('-op', '--openfile', type=str,
                        help="Show the contents of the given file in a repo")
-    group.add_argument('-f','--followers',type=str,
+    group.add_argument('-f', '--followers', type=str,
                        help="Get followers of the user")
-    group.add_argument('-fo','--following',type=str,
-    				   help="Get people following the user")
-    group.add_argument('-c','--contributors',type=str,
-    				   help="Get contributors of a repo")
+    group.add_argument('-fo', '--following', type=str,
+                       help="Get people following the user")
+    group.add_argument('-c', '--contributors', type=str,
+                       help="Get contributors of a repo")
 
     if len(sys.argv) == 1:
         parser.print_help()
@@ -120,7 +120,7 @@ def main():
         urllib.request.urlretrieve(response_url, name)
         print(name + ' has been saved\n')
         return
-    
+
 # FOLLOWERS
 
     if args.followers:
@@ -128,17 +128,15 @@ def main():
         url = GITHUB_API + 'users/' + name + '/followers'
 
 #FOLLOWING
-
- 	if args.following :
- 		name = url_parse(args.following)
- 		url = GITHUB_API + 'users/' + name + '/following'
+    if args.following:
+        name = url_parse(args.following)
+        url = GITHUB_API + 'users/' + name + '/following'
 
 #CONTRIBUTORS
+    if args.contributors:
+        name = url_parse(args.contributors)
+        url = GITHUB_API + 'repos/' + name + '/contributors'
 
-	if args.contributors :
-		name = url_parse(args.contributors)
-		url = GITHUB_API + 'repos/' + name + '/contributors'
-        
 # OTHER OPTIONS
 
     response = get_req(url)
@@ -173,7 +171,6 @@ def main():
         print(base64.b64decode(jsondata['content']).decode('utf-8'))
 
 # RELEASES
-
     if args.releases:
         table = PrettyTable([" Release name ", " Release Date ", " Release Time "])
         for i in jsondata:
