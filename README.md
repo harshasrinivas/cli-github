@@ -1,4 +1,4 @@
-#`cli-github`
+# `cli-github`
 
 **A Command-Line Python Application to display Github from the CLI !** ![License](http://img.shields.io/badge/License-GNU%20GPL%20v3-blue.svg)
 
@@ -10,13 +10,13 @@
 
 ![gif](https://github.com/harshasrinivas/cli-github/blob/master/images/my.gif)
 
-#Installation
+# Installation
 
-##Using `pip`
+## Using `pip`
 
 `pip install cli-github`
 
-##Get the latest build from the Source
+## Get the latest build from the Source
 
 * Clone the repo `git clone https://github.com/harshasrinivas/cli-github.git`
 * Run `python setup.py install`
@@ -27,13 +27,13 @@
 * Clone the repo.
 * Execute `bash build_deb/build_deb.sh`
 
-##Dependencies
+## Dependencies
 
 * prettytable `pip install prettytable`
 * future `pip install future`
 * python-dateutil `pip install python-dateutil`
 
-#Setting Up
+# Setting Up
 
 **Github Token as Temporary Environment Variable**
 
@@ -49,7 +49,7 @@
 
 <br>
 
-#Options
+# Options
 
 ```sh
 -h, --help          show this help message and exit
@@ -77,7 +77,7 @@
 
 
 
-#Usage
+# Usage
 
 Display the list of a user's repositories from the username/URL, along with the number of stargazers
 
@@ -120,7 +120,7 @@ Get the contributors of a repo
 `$ cli-github -fo harshasrinivas/cli-github`
 
 
-#Live Demo
+# Live Demo
 
 [**DEMO**](http://showterm.io/aaa79dee63aad0695e304#fast) : Display the list of a user's repositories from the username/URL, along with the number of stargazers
 
@@ -138,11 +138,11 @@ Get the contributors of a repo
 
 [**DEMO**](http://showterm.io/9bfd25a48074fb2ca8211#fast) : List the followers of a user
 
-#Contribute
+# Contribute
 
 If you want to add features, improve them, or report issues, feel free to send a pull request.
 
-#Contributors
+# Contributors
 
 * [SanketDG](https://github.com/SanketDG)
 * [Pratik151](https://github.com/Pratik151)
